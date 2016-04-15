@@ -1,0 +1,23 @@
+Microsoft Visual Studio Solution File, Format Version 11.00
+# Visual Studio 2008
+
+Project("{7014F3AD-43FE-081B-56DB-DB985377099E}") = "Don-t-Blink-master", "Assembly-CSharp.csproj", "{DA7158F4-C388-28E9-9670-DE31CF8A37F0}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{DA7158F4-C388-28E9-9670-DE31CF8A37F0}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{DA7158F4-C388-28E9-9670-DE31CF8A37F0}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{DA7158F4-C388-28E9-9670-DE31CF8A37F0}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{DA7158F4-C388-28E9-9670-DE31CF8A37F0}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(MonoDevelopProperties) = preSolution
+		StartupItem = Assembly-CSharp.csproj
+	EndGlobalSection
+EndGlobal
