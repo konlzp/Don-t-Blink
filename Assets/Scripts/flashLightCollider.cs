@@ -3,10 +3,14 @@ using System.Collections;
 
 public class flashLightCollider : MonoBehaviour {
 
-	void OnTriggerStay(Collider other){
-		//Make the monsters freeze!
+    public GameObject monsters;
 
-		Debug.Log (other.gameObject);
-		Debug.Log ("hello");
+	void OnTriggerStay(Collider other){
+        //Make the monsters freeze!
+        if (other.gameObject.transform.parent.gameObject.name == monsters.name)
+        {
+            Debug.Log(other.gameObject);
+            Debug.Log("hello");
+        }
 	}
 }
