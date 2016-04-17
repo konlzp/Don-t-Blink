@@ -71,6 +71,7 @@
   <ItemGroup>
     <Compile Include="Assets\Scripts\CameraMoving.cs" />
     <Compile Include="Assets\Scripts\LightControl.cs" />
+    <Compile Include="Assets\Scripts\MonsterController.cs" />
     <Compile Include="Assets\Scripts\flashLightCollider.cs" />
   </ItemGroup>
   <Import Project="$(MSBuildExtensionsPath)\SyntaxTree\UnityVS\2015\UnityVS.CSharp.targets" />

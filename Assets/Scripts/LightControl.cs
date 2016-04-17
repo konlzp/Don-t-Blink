@@ -7,7 +7,10 @@ public class LightControl : MonoBehaviour {
     public Slider slider;
     public int flashCount;
     public float stepTime = 1;
+    public AudioClip lightOnClip;
+    public AudioClip lightOffClip;
 
+    private AudioSource lightAudio;
     private float nextTime = 0;
     private Light torch;
     private bool lightOn = false;
@@ -19,6 +22,7 @@ public class LightControl : MonoBehaviour {
     void Start () {
         torch = GetComponent<Light>();
         torch.intensity = 0;
+        lightAudio = GetComponent<AudioSource>();
         for(int obj = 0; obj < slider.transform.childCount; obj ++)
         {
             var tempObj = slider.transform.GetChild(obj).gameObject;
@@ -32,6 +36,8 @@ public class LightControl : MonoBehaviour {
 
     IEnumerator turnOnLight()
     {
+        lightAudio.clip = lightOnClip;
+        lightAudio.Play();
         torch.intensity = flashCount - 2;
         yield return new WaitForSeconds(0.3f);
         for (int i = 0; i < flashCount; i ++)
@@ -46,6 +52,8 @@ public class LightControl : MonoBehaviour {
 
     IEnumerator turnOffLight()
     {
+        lightAudio.clip = lightOffClip;
+        lightAudio.Play();
         torch.intensity = 2;
         yield return new WaitForSeconds(0.3f);
         for (int i = flashCount; i > 0; i --)
@@ -56,6 +64,11 @@ public class LightControl : MonoBehaviour {
             yield return new WaitForSeconds(0.08f);
         }
         torch.intensity = 0;
+    }
+
+    public bool getLightStatus()
+    {
+        return lightOn;
     }
 	
 	// Update is called once per frame
@@ -75,7 +88,7 @@ public class LightControl : MonoBehaviour {
 
         if(lightOn)
         {
-            slider.value = Mathf.MoveTowards(slider.value, slider.value - 1.0f, 0.2f);
+            slider.value = Mathf.MoveTowards(slider.value, slider.value - 1.0f, 0.05f);
             float remainBattery = slider.value / 100;
 			if (slider.value <= 0) {
 				batteryOut = true;
