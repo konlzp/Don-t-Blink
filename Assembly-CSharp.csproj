@@ -6,7 +6,7 @@
     <ProductVersion>10.0.20506</ProductVersion>
     <SchemaVersion>2.0</SchemaVersion>
     <RootNamespace></RootNamespace>
-    <ProjectGuid>{DA7158F4-C388-28E9-9670-DE31CF8A37F0}</ProjectGuid>
+    <ProjectGuid>{AC33294B-A0AC-181A-0008-044B4B695C9E}</ProjectGuid>
     <OutputType>Library</OutputType>
     <AppDesignerFolder>Properties</AppDesignerFolder>
     <AssemblyName>Assembly-CSharp</AssemblyName>
@@ -47,7 +47,17 @@
   <ItemGroup>
      <Compile Include="Assets\Scripts\CameraMoving.cs" />
      <Compile Include="Assets\Scripts\LightControl.cs" />
+     <Compile Include="Assets\Scripts\MonsterController.cs" />
      <Compile Include="Assets\Scripts\flashLightCollider.cs" />
+     <Compile Include="Assets\WR_wHiteRabbiT-sTudio\WRFramework\Unity\Extensions\VectorExtensions.cs" />
+     <Compile Include="Assets\WR_wHiteRabbiT-sTudio\WRFramework\Unity\UI\GUIHelper.cs" />
+     <Compile Include="Assets\WR_wHiteRabbiT-sTudio\WRFramework\Unity\Util\Logo.cs" />
+     <None Include="Assets\Kitten\Shaders\Normal-Diffuse.shader" />
+     <None Include="Assets\Kitten\Shaders\Alpha-Diffuse.shader" />
+     <None Include="Assets\WR_wHiteRabbiT-sTudio\Scene\DancingRabbit\ReadMe.txt" />
+ <Reference Include="Assembly-UnityScript-firstpass">
+ <HintPath>/Users/wendychen/Desktop/Don-t-Blink/Library/ScriptAssemblies/Assembly-UnityScript-firstpass.dll</HintPath>
+ </Reference>
  <Reference Include="UnityEngine.Networking">
  <HintPath>/Applications/Unity/Unity.app/Contents/UnityExtensions/Unity/Networking/UnityEngine.Networking.dll</HintPath>
  </Reference>
