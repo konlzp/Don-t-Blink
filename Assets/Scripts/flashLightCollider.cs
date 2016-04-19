@@ -20,8 +20,7 @@ public class flashLightCollider : MonoBehaviour {
         if (other.gameObject.transform.parent.gameObject.name == monsters.name && lightController.getLightStatus())
         {
             monsterController.makeItScream();
-            Debug.Log(other.gameObject);
-            Debug.Log("hello");
+//            Debug.Log(other.gameObject);
         }
 	}
 }

@@ -1573,6 +1573,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   path: {fileID: 186674596}
   speed: 0.1
+  flashlight: {fileID: 1988925789}
 --- !u!1001 &1410240500
 Prefab:
   m_ObjectHideFlags: 0

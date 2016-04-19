@@ -36,6 +36,7 @@ public class LightControl : MonoBehaviour {
 
     IEnumerator turnOnLight()
     {
+        lightOn = true;
         lightAudio.clip = lightOnClip;
         lightAudio.Play();
         torch.intensity = flashCount - 2;
@@ -64,6 +65,7 @@ public class LightControl : MonoBehaviour {
             yield return new WaitForSeconds(0.08f);
         }
         torch.intensity = 0;
+        lightOn = false;
     }
 
     public bool getLightStatus()
@@ -77,10 +79,8 @@ public class LightControl : MonoBehaviour {
 			if (batteryOut == false) {
 				if (lightOn == false) {
 					StartCoroutine (turnOnLight ());
-					lightOn = true;
 				} else {
                     StartCoroutine(turnOffLight());
-					lightOn = false;
 				}
 				nextTime = Time.time + stepTime;
 			}
