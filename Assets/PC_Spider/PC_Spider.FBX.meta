@@ -3,7 +3,70 @@ guid: d97b025b4f6d2964e929ae3f8fdc85f1
 ModelImporter:
   serializedVersion: 19
   fileIDToRecycleName:
+    100000: e
+    100002: e 1
+    100004: e 2
+    100006: eHub
+    100008: eLLeg11
+    100010: eLLeg12
+    100012: eLLeg13
+    100014: eLLeg21
+    100016: eLLeg22
+    100018: eLLeg23
+    100020: eLLeg31
+    100022: eLLeg32
+    100024: eLLeg33
+    100026: eLLeg41
+    100028: eLLeg42
+    100030: eLLeg43
+    100032: eRLeg11
+    100034: eRLeg12
+    100036: eRLeg13
+    100038: eRLeg21
+    100040: eRLeg22
+    100042: eRLeg23
+    100044: eRLeg31
+    100046: eRLeg32
+    100048: eRLeg33
+    100050: eRLeg41
+    100052: eRLeg42
+    100054: eRLeg43
+    100056: PC_Spider
+    100058: //RootNode
+    400000: e
+    400002: e 1
+    400004: e 2
+    400006: eHub
+    400008: eLLeg11
+    400010: eLLeg12
+    400012: eLLeg13
+    400014: eLLeg21
+    400016: eLLeg22
+    400018: eLLeg23
+    400020: eLLeg31
+    400022: eLLeg32
+    400024: eLLeg33
+    400026: eLLeg41
+    400028: eLLeg42
+    400030: eLLeg43
+    400032: eRLeg11
+    400034: eRLeg12
+    400036: eRLeg13
+    400038: eRLeg21
+    400040: eRLeg22
+    400042: eRLeg23
+    400044: eRLeg31
+    400046: eRLeg32
+    400048: eRLeg33
+    400050: eRLeg41
+    400052: eRLeg42
+    400054: eRLeg43
+    400056: PC_Spider
+    400058: //RootNode
     4300000: PC_Spider
+    7400000: walk
+    11100000: //RootNode
+    13700000: PC_Spider
   materials:
     importMaterials: 0
     materialName: 0
