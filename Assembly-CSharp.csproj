@@ -48,7 +48,9 @@
      <Compile Include="Assets\Scripts\CameraMoving.cs" />
      <Compile Include="Assets\Scripts\LightControl.cs" />
      <Compile Include="Assets\Scripts\MonsterController.cs" />
+     <Compile Include="Assets\Scripts\Timer.cs" />
      <Compile Include="Assets\Scripts\flashLightCollider.cs" />
+     <Compile Include="Assets\Scripts\playerLoseGame.cs" />
      <Compile Include="Assets\WR_wHiteRabbiT-sTudio\WRFramework\Unity\Extensions\VectorExtensions.cs" />
      <Compile Include="Assets\WR_wHiteRabbiT-sTudio\WRFramework\Unity\UI\GUIHelper.cs" />
      <Compile Include="Assets\WR_wHiteRabbiT-sTudio\WRFramework\Unity\Util\Logo.cs" />
