@@ -6,12 +6,16 @@ public class LightControl : MonoBehaviour {
     
     public Slider slider;
     public int flashCount;
-    public float stepTime = 1;
     public AudioClip lightOnClip;
     public AudioClip lightOffClip;
+    public float decRate;
+    public float stepTime = 1;
+    public float rechargeDelay;
+    public float rechargeRate;
 
     private AudioSource lightAudio;
-    private float nextTime = 0;
+    private float nextLightOn = 0;
+    private float nextRecharge = 0;
     private Light torch;
     private bool lightOn = false;
 	private bool batteryOut = false;
@@ -75,28 +79,39 @@ public class LightControl : MonoBehaviour {
 	
 	// Update is called once per frame
 	void Update () {
-		if (Input.GetKeyDown (KeyCode.Z) && Time.time > nextTime) {
+        //Turning on or off light
+        if (Input.GetKeyDown (KeyCode.Z) && Time.time > nextLightOn) {
 			if (batteryOut == false) {
 				if (lightOn == false) {
 					StartCoroutine (turnOnLight ());
 				} else {
                     StartCoroutine(turnOffLight());
 				}
-				nextTime = Time.time + stepTime;
+				nextLightOn = Time.time + stepTime;
 			}
 		}
 
+        //Recharge the flashlight
+        if(!lightOn && Input.GetKeyDown(KeyCode.Space) && Time.time > nextRecharge)
+        {
+            slider.value = Mathf.Min(slider.value + rechargeRate, 100f);
+            nextRecharge = Time.time + rechargeDelay;
+        }
+
+        //Change the value of the slider
         if(lightOn)
         {
-            slider.value = Mathf.MoveTowards(slider.value, slider.value - 1.0f, 0.05f);
-            float remainBattery = slider.value / 100;
+            slider.value = Mathf.MoveTowards(slider.value, slider.value - 1.0f, decRate);
 			if (slider.value <= 0) {
 				batteryOut = true;
                 StartCoroutine(turnOffLight());
                 lightOn = false;
 			}
-            torch.color = Color.Lerp(Color.white, deadFlashlight, 1 - remainBattery);
-            sliderFill.color = new Color(1, remainBattery, remainBattery, 1);
         }
-	}
+
+        //Change the color of the slider and the flashlight
+        float remainBattery = slider.value / 100;
+        torch.color = Color.Lerp(Color.white, deadFlashlight, 1 - remainBattery);
+        sliderFill.color = new Color(1, remainBattery, remainBattery, 1);
+    }
 }

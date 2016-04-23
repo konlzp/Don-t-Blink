@@ -2667,9 +2667,12 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   slider: {fileID: 363600350}
   flashCount: 6
-  stepTime: 1
   lightOnClip: {fileID: 8300000, guid: 3af9f32417f9f33419d37d201588a034, type: 3}
   lightOffClip: {fileID: 8300000, guid: 008766bdc446fa940a8f0ac99388822e, type: 3}
+  decRate: 0.03
+  stepTime: 1
+  rechargeDelay: 0.1
+  rechargeRate: 0.5
 --- !u!82 &1988925793
 AudioSource:
   m_ObjectHideFlags: 0
