@@ -4,18 +4,21 @@ using System.Collections.Generic;
 
 public class MonsterMover : MonoBehaviour
 {
-    public GameObject path;
-    public float speed;
-    private float rspeed = 10.0F;
-    public GameObject flashlight;
-
+    // Waypoint
     private List<Transform> waypoints = new List<Transform> ();
-    // List of waypoints
     private int numWaypoints;
     private int waypointIndex = 0;
     private Transform nextWaypoint;
+    public GameObject path;
+    public float speed;
+    private float rspeed = 10.0F;
+
+    // Flashlight
+    public GameObject flashlight;
     private bool collided = false;
     private LightControl lightControl;
+    private const float STUN_DURATION = 5.00F;
+    private float stunTime = 0.0F;
 
     void Start ()
     {
@@ -38,7 +41,7 @@ public class MonsterMover : MonoBehaviour
         // ----+----------
         //  IN | STOP MOVE
         // OUT | MOVE MOVE
-        if (!(collided && lightControl.getLightStatus ())) {
+        if (!IsAffectedByFlashlight () && !IsStunned ()) { // Move
             if (transform.position == nextWaypoint.position) { // Arrived at waypoint, need to move to next 
                 StartMoveToNextWaypoint ();
             } else {
@@ -52,6 +55,15 @@ public class MonsterMover : MonoBehaviour
                 Debug.DrawRay (transform.position, newDir, Color.red);
                 transform.rotation = Quaternion.LookRotation (newDir);
             }
+        }
+    }
+
+    void Update ()
+    {
+        if (IsStunned () && !IsAffectedByFlashlight ()) { // Decrease stun
+            stunTime -= Time.deltaTime;
+        } else if (IsAffectedByFlashlight ()) { // Reset stun if light is on monster
+            stunTime = STUN_DURATION;
         }
     }
 
@@ -78,5 +90,15 @@ public class MonsterMover : MonoBehaviour
             nextWaypoint = waypoints [waypointIndex];
             waypointIndex++;
         }
+    }
+
+    private bool IsAffectedByFlashlight ()
+    {
+        return collided && lightControl.getLightStatus ();
+    }
+
+    private bool IsStunned ()
+    {
+        return stunTime > 0.0F;
     }
 }
