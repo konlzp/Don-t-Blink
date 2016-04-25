@@ -14,16 +14,25 @@ public class MonsterMover : MonoBehaviour
     private float rspeed = 10.0F;
 
     // Flashlight
-    public GameObject flashlight;
+    public GameObject spotlight;
     private bool collided = false;
     private LightControl lightControl;
     private const float STUN_DURATION = 5.00F;
     private float stunTime = 0.0F;
 
+    // Animation
+    private Animator animator = null;
+    // Underscore prevents naming warning
+    private Animation animation_ = null;
+    private bool animationOn = true;
+
     void Start ()
     {
-        lightControl = flashlight.GetComponent<LightControl> ();
-
+        // Get components
+        lightControl = spotlight.GetComponent<LightControl> ();
+        animator = GetComponent<Animator> ();
+        animation_ = GetComponent<Animation> ();
+    
         // Set up waypoints list
         foreach (Transform child in path.transform) {
             waypoints.Add (child);
@@ -62,8 +71,10 @@ public class MonsterMover : MonoBehaviour
     {
         if (IsStunned () && !IsAffectedByFlashlight ()) { // Decrease stun
             stunTime -= Time.deltaTime;
+            SetAnimationOn (true);
         } else if (IsAffectedByFlashlight ()) { // Reset stun if light is on monster
             stunTime = STUN_DURATION;
+            SetAnimationOn (false);
         }
     }
 
@@ -89,6 +100,27 @@ public class MonsterMover : MonoBehaviour
         if (waypointIndex < numWaypoints) {
             nextWaypoint = waypoints [waypointIndex];
             waypointIndex++;
+        }
+    }
+
+    private void SetAnimationOn (bool on)
+    {
+        if (on && !animationOn) { // Turn on
+            Debug.Log ("Starting animation for " + gameObject.name);
+            if (animator != null) {
+                animator.StartPlayback ();
+            } else if (animation_ != null) {
+                animation_.Play ();
+            }
+            animationOn = true;
+        } else if (!on && animationOn) { // Turn off
+            Debug.Log ("Stopping animation for " + gameObject.name);
+            if (animator != null) {
+                animator.Stop ();
+            } else if (animation_ != null) {
+                animation_.Stop ();
+            }
+            animationOn = false;
         }
     }
 
