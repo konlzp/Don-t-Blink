@@ -18,7 +18,6 @@ public class LightControl : MonoBehaviour {
     private float nextRecharge = 0;
     private Light torch;
     private bool lightOn = false;
-	private bool batteryOut = false;
     private Image sliderFill;
     private Color deadFlashlight = new Color(110.0f / 255, 90.0f / 255, 80.0f / 255);
 
@@ -81,7 +80,7 @@ public class LightControl : MonoBehaviour {
 	void Update () {
         //Turning on or off light
         if (Input.GetKeyDown (KeyCode.Z) && Time.time > nextLightOn) {
-			if (batteryOut == false) {
+			if (slider.value != 0) {
 				if (lightOn == false) {
 					StartCoroutine (turnOnLight ());
 				} else {
@@ -101,9 +100,8 @@ public class LightControl : MonoBehaviour {
         //Change the value of the slider
         if(lightOn)
         {
-            slider.value = Mathf.MoveTowards(slider.value, slider.value - 1.0f, decRate);
+            slider.value = Mathf.Max(Mathf.MoveTowards(slider.value, slider.value - 1.0f, decRate), 0);
 			if (slider.value <= 0) {
-				batteryOut = true;
                 StartCoroutine(turnOffLight());
                 lightOn = false;
 			}
