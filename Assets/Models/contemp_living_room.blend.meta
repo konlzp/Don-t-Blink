@@ -1,0 +1,150 @@
+fileFormatVersion: 2
+guid: 6f396ecc54a8d4aa38ab4c357b206d97
+timeCreated: 1461818219
+licenseType: Free
+ModelImporter:
+  serializedVersion: 19
+  fileIDToRecycleName:
+    100000: big_sideboard
+    100002: bowl1
+    100004: bowl2
+    100006: bowl3
+    100008: closet
+    100010: //RootNode
+    100012: emit1
+    100014: emit2
+    100016: emit3
+    100018: shelf
+    100020: shelfsuport
+    100022: shelfsuport2
+    100024: sideboard
+    100026: turn_on_off
+    100028: tv
+    100030: wall
+    400000: big_sideboard
+    400002: bowl1
+    400004: bowl2
+    400006: bowl3
+    400008: closet
+    400010: //RootNode
+    400012: emit1
+    400014: emit2
+    400016: emit3
+    400018: shelf
+    400020: shelfsuport
+    400022: shelfsuport2
+    400024: sideboard
+    400026: turn_on_off
+    400028: tv
+    400030: wall
+    2300000: big_sideboard
+    2300002: bowl1
+    2300004: bowl2
+    2300006: bowl3
+    2300008: closet
+    2300010: emit1
+    2300012: emit2
+    2300014: emit3
+    2300016: shelf
+    2300018: shelfsuport
+    2300020: shelfsuport2
+    2300022: sideboard
+    2300024: turn_on_off
+    2300026: tv
+    2300028: wall
+    3300000: big_sideboard
+    3300002: bowl1
+    3300004: bowl2
+    3300006: bowl3
+    3300008: closet
+    3300010: emit1
+    3300012: emit2
+    3300014: emit3
+    3300016: shelf
+    3300018: shelfsuport
+    3300020: shelfsuport2
+    3300022: sideboard
+    3300024: turn_on_off
+    3300026: tv
+    3300028: wall
+    4300000: emit3
+    4300002: emit2
+    4300004: emit1
+    4300006: wall
+    4300008: turn_on_off
+    4300010: tv
+    4300012: bowl2
+    4300014: bowl1
+    4300016: bowl3
+    4300018: shelfsuport2
+    4300020: shelfsuport
+    4300022: shelf
+    4300024: sideboard
+    4300026: closet
+    4300028: big_sideboard
+    7400000: Default Take
+    9500000: //RootNode
+  materials:
+    importMaterials: 1
+    materialName: 0
+    materialSearch: 1
+  animations:
+    legacyGenerateAnimations: 4
+    bakeSimulation: 0
+    resampleRotations: 1
+    optimizeGameObjects: 0
+    motionNodeName: 
+    animationImportErrors: 
+    animationImportWarnings: 
+    animationRetargetingWarnings: 
+    animationDoRetargetingWarnings: 0
+    animationCompression: 1
+    animationRotationError: 0.5
+    animationPositionError: 0.5
+    animationScaleError: 0.5
+    animationWrapMode: 0
+    extraExposedTransformPaths: []
+    clipAnimations: []
+    isReadable: 1
+  meshes:
+    lODScreenPercentages: []
+    globalScale: 1
+    meshCompression: 0
+    addColliders: 0
+    importBlendShapes: 1
+    swapUVChannels: 0
+    generateSecondaryUV: 0
+    useFileUnits: 1
+    optimizeMeshForGPU: 1
+    keepQuads: 0
+    weldVertices: 1
+    secondaryUVAngleDistortion: 8
+    secondaryUVAreaDistortion: 15.000001
+    secondaryUVHardAngle: 88
+    secondaryUVPackMargin: 4
+    useFileScale: 1
+  tangentSpace:
+    normalSmoothAngle: 60
+    normalImportMode: 0
+    tangentImportMode: 3
+  importAnimation: 1
+  copyAvatar: 0
+  humanDescription:
+    human: []
+    skeleton: []
+    armTwist: 0.5
+    foreArmTwist: 0.5
+    upperLegTwist: 0.5
+    legTwist: 0.5
+    armStretch: 0.05
+    legStretch: 0.05
+    feetSpacing: 0
+    rootMotionBoneName: 
+    hasTranslationDoF: 0
+  lastHumanDescriptionAvatarSource: {instanceID: 0}
+  animationType: 2
+  humanoidOversampling: 1
+  additionalBone: 0
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
