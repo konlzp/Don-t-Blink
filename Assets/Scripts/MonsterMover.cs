@@ -5,12 +5,12 @@ using System.Collections.Generic;
 public class MonsterMover : MonoBehaviour
 {
     // Waypoint
+    public GameObject path;
+    public float speed;
     private List<Transform> waypoints = new List<Transform> ();
     private int numWaypoints;
     private int waypointIndex = 0;
     private Transform nextWaypoint;
-    public GameObject path;
-    public float speed;
     private float rspeed = 10.0F;
 
     // Flashlight
@@ -25,6 +25,9 @@ public class MonsterMover : MonoBehaviour
     // Underscore prevents naming warning
     private Animation animation_ = null;
     private bool animationOn = true;
+
+    // Mainlight
+    public Light mainLight;
 
     void Start ()
     {
@@ -50,7 +53,7 @@ public class MonsterMover : MonoBehaviour
         // ----+----------
         //  IN | STOP MOVE
         // OUT | MOVE MOVE
-        if (!IsAffectedByFlashlight () && !IsStunned ()) { // Move
+        if (!IsAffectedByFlashlight () && !IsStunned () && !IsMainlightOn()) { // Move
             if (transform.position == nextWaypoint.position) { // Arrived at waypoint, need to move to next 
                 StartMoveToNextWaypoint ();
             } else {
@@ -69,7 +72,7 @@ public class MonsterMover : MonoBehaviour
 
     void Update ()
     {
-        if (IsStunned () && !IsAffectedByFlashlight ()) { // Decrease stun
+        if (IsStunned () && !IsAffectedByFlashlight () && !IsMainlightOn()) { // Decrease stun
             stunTime -= Time.deltaTime;
             SetAnimationOn (true);
         } else if (IsAffectedByFlashlight ()) { // Reset stun if light is on monster
@@ -122,6 +125,11 @@ public class MonsterMover : MonoBehaviour
             }
             animationOn = false;
         }
+    }
+
+    private bool IsMainlightOn()
+    {
+        return mainLight.intensity != 0;
     }
 
     private bool IsAffectedByFlashlight ()
