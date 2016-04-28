@@ -331,7 +331,7 @@ MonoBehaviour:
     m_BestFit: 0
     m_MinSize: 0
     m_MaxSize: 58
-    m_Alignment: 0
+    m_Alignment: 1
     m_AlignByGeometry: 0
     m_RichText: 1
     m_HorizontalOverflow: 0
@@ -3910,7 +3910,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   path: {fileID: 186674596}
-  speed: 0.01
+  speed: 0.1
   spotlight: {fileID: 1988925789}
 --- !u!1001 &1410240500
 Prefab:
@@ -5594,7 +5594,7 @@ AudioSource:
   Spatialize: 0
   Priority: 128
   DopplerLevel: 1
-  MinDistance: 1
+  MinDistance: 0.5580187
   MaxDistance: 500
   Pan2D: 0
   rolloffMode: 0
@@ -5662,8 +5662,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   monsters: {fileID: 2083377713}
-  winText: {fileID: 117765403}
-  timer: {fileID: 1643636791}
+  gameController: {fileID: 2132658700}
 --- !u!136 &1988925795
 CapsuleCollider:
   m_ObjectHideFlags: 0
@@ -5673,10 +5672,10 @@ CapsuleCollider:
   m_Material: {fileID: 0}
   m_IsTrigger: 1
   m_Enabled: 1
-  m_Radius: 1.06
-  m_Height: 1
+  m_Radius: 1.2543015
+  m_Height: 6.0605884
   m_Direction: 1
-  m_Center: {x: 0, y: 0, z: 0}
+  m_Center: {x: 0, y: -0.51, z: 0}
 --- !u!54 &1988925796
 Rigidbody:
   m_ObjectHideFlags: 0
@@ -6296,6 +6295,47 @@ MonoBehaviour:
   monsters: {fileID: 0}
   speedH: 2
   speedV: 2
+--- !u!1 &2132658698
+GameObject:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  serializedVersion: 4
+  m_Component:
+  - 4: {fileID: 2132658699}
+  - 114: {fileID: 2132658700}
+  m_Layer: 0
+  m_Name: Game Controller
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &2132658699
+Transform:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 2132658698}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 0}
+  m_RootOrder: 6
+--- !u!114 &2132658700
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 2132658698}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 80dd0fc30be8d62438504540d29eab02, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  uiText: {fileID: 117765403}
+  timer: {fileID: 1643636791}
 --- !u!1 &2134787775
 GameObject:
   m_ObjectHideFlags: 0
