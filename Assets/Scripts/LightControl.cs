@@ -126,7 +126,7 @@ public class LightControl : MonoBehaviour {
     {
         yield return new WaitForSeconds(0.5f);
         mainLight.intensity = 1.5f;
-        yield return new WaitForSeconds(2);
+        yield return new WaitForSeconds(3);
         mainLight.intensity = 0;
     }
 	

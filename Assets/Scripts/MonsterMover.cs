@@ -24,7 +24,7 @@ public class MonsterMover : MonoBehaviour
     private Animator animator = null;
     // Underscore prevents naming warning
     private Animation animation_ = null;
-    private bool animationOn = true;
+    private bool animationOn = false;
 
     // Mainlight
     public Light mainLight;
@@ -43,7 +43,7 @@ public class MonsterMover : MonoBehaviour
         numWaypoints = waypoints.Count;
 
         // Start moving to first waypoint
-        StartMoveToNextWaypoint ();
+        StartMoveToNextWaypoint();
     }
 
     void FixedUpdate ()
