@@ -124,9 +124,9 @@ public class LightControl : MonoBehaviour {
 
     IEnumerator CallMom()
     {
-        yield return new WaitForSeconds(0.5f);
+        yield return new WaitForSeconds(2f);
         mainLight.intensity = 1.5f;
-        yield return new WaitForSeconds(3);
+        yield return new WaitForSeconds(5);
         mainLight.intensity = 0;
     }
 	
