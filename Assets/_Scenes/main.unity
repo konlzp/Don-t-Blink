@@ -680,7 +680,6 @@ Canvas:
   m_ReceivesEvents: 1
   m_OverrideSorting: 0
   m_OverridePixelPerfect: 0
-  m_SortingBucketNormalizedSize: 0
   m_SortingLayerID: 0
   m_SortingOrder: 0
   m_TargetDisplay: 0
@@ -1660,7 +1659,7 @@ Transform:
   - {fileID: 105417211}
   - {fileID: 814936101}
   m_Father: {fileID: 0}
-  m_RootOrder: 5
+  m_RootOrder: 3
 --- !u!1001 &441312448
 Prefab:
   m_ObjectHideFlags: 0
@@ -4824,7 +4823,7 @@ Transform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
-  m_RootOrder: 7
+  m_RootOrder: 5
 --- !u!1 &1502273941
 GameObject:
   m_ObjectHideFlags: 0
@@ -5100,7 +5099,7 @@ Transform:
   - {fileID: 186674597}
   - {fileID: 799559039}
   m_Father: {fileID: 0}
-  m_RootOrder: 4
+  m_RootOrder: 8
 --- !u!1001 &1549598832
 Prefab:
   m_ObjectHideFlags: 0
@@ -6694,8 +6693,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 45f650b6d831746a380a3831ed12b91e, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  monsters: {fileID: 0}
-  gameController: {fileID: 0}
+  monsters: {fileID: 2083377713}
+  gameController: {fileID: 2132658700}
 --- !u!136 &1988925795
 CapsuleCollider:
   m_ObjectHideFlags: 0
@@ -7018,7 +7017,7 @@ Transform:
   - {fileID: 157777670}
   - {fileID: 2083814969}
   m_Father: {fileID: 0}
-  m_RootOrder: 3
+  m_RootOrder: 7
 --- !u!82 &2083377715
 AudioSource:
   m_ObjectHideFlags: 0
@@ -7402,7 +7401,7 @@ Transform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
-  m_RootOrder: 6
+  m_RootOrder: 4
 --- !u!114 &2132658700
 MonoBehaviour:
   m_ObjectHideFlags: 0
