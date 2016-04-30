@@ -4,14 +4,14 @@ using System.Collections;
 public class FlashLightCollider : MonoBehaviour {
 
     public GameObject monsters;
-    public GameObject flashlight;
+    public GameObject spotlight;
 
     private LightControl lightController;
     private MonsterController monsterController;
 
     void Start()
     {
-        lightController = flashlight.GetComponent<LightControl>();
+        lightController = spotlight.GetComponent<LightControl>();
         monsterController = monsters.GetComponent<MonsterController>();
     }
 

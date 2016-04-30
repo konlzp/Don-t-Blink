@@ -680,6 +680,7 @@ Canvas:
   m_ReceivesEvents: 1
   m_OverrideSorting: 0
   m_OverridePixelPerfect: 0
+  m_SortingBucketNormalizedSize: 0
   m_SortingLayerID: 0
   m_SortingOrder: 0
   m_TargetDisplay: 0
@@ -959,6 +960,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 35a94791a223f4284a48beb35f2d6cdb, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  monsters: {fileID: 2083377713}
+  spotlight: {fileID: 1988925789}
 --- !u!1 &282701744 stripped
 GameObject:
   m_PrefabParentObject: {fileID: 100058, guid: d97b025b4f6d2964e929ae3f8fdc85f1, type: 3}
@@ -6562,7 +6565,7 @@ Light:
   m_Type: 0
   m_Color: {r: 0.43137255, g: 0.3529412, b: 0.3137255, a: 1}
   m_Intensity: 6.7
-  m_Range: 25
+  m_Range: 35
   m_SpotAngle: 30
   m_CookieSize: 10
   m_Shadows:
@@ -6691,6 +6694,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 45f650b6d831746a380a3831ed12b91e, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  monsters: {fileID: 0}
+  gameController: {fileID: 0}
 --- !u!136 &1988925795
 CapsuleCollider:
   m_ObjectHideFlags: 0
@@ -7347,7 +7352,7 @@ Transform:
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 2090464763}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0, y: 4, z: 0}
+  m_LocalPosition: {x: 0.24, y: 4, z: -14.55}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
   - {fileID: 277640987}
