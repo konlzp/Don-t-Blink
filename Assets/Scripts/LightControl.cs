@@ -15,6 +15,7 @@ public class LightControl : MonoBehaviour {
     public float rechargeRate;
     public int maxMomCount;
     public Light mainLight;
+    public GameController gameController;
 
     private AudioSource audioSource;
     private float nextLightOn = 0;
@@ -132,6 +133,12 @@ public class LightControl : MonoBehaviour {
 	
 	// Update is called once per frame
 	void Update () {
+        
+        if (!gameController.gameOn)
+        {
+            return;
+        }
+
         FlashlightControl();
 
         if (!lightOn && Input.GetKeyDown(KeyCode.Space) && Time.time > nextRecharge)

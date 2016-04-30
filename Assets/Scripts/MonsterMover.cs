@@ -30,6 +30,9 @@ public class MonsterMover : MonoBehaviour
     // Mainlight
     public Light mainLight;
 
+    // Game Controller
+    public GameController gameController;
+
     void Start ()
     {
         // Get components
@@ -59,7 +62,8 @@ public class MonsterMover : MonoBehaviour
         // ----+----------
         //  IN | STOP MOVE
         // OUT | MOVE MOVE
-        if (!IsAffectedByFlashlight () && !IsStunned () && !IsMainlightOn ()) { // Move
+
+        if (!IsAffectedByFlashlight () && !IsStunned () && !IsMainlightOn () && gameController.gameOn) { // Move
             if (transform.position == nextWaypoint.position) { // Arrived at waypoint, need to move to next 
                 StartMoveToNextWaypoint ();
             } else {
@@ -78,8 +82,9 @@ public class MonsterMover : MonoBehaviour
 
     void Update ()
     {
+
         // Decrease stun if currentntly stunned and not affected by light
-        if (IsStunned () && !IsAffectedByFlashlight () && !IsMainlightOn ()) { // Decrease stun
+        if (IsStunned () && !IsAffectedByFlashlight () && !IsMainlightOn () && gameController.gameOn) { // Decrease stun
             stunTime -= Time.deltaTime;
             SetAnimationOn ();
         } else if (IsAffectedByFlashlight () || IsMainlightOn ()) { // Reset stun if light is on monster

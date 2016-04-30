@@ -11,6 +11,8 @@ public class GameController : MonoBehaviour
     public Light mainLight;
     public AudioClip backGroundMusic;
     public AudioClip lullabyMusic;
+    public bool gameOn = false;
+    public GameObject startMenu;
 
     private AudioSource audioSource;
 
@@ -43,8 +45,15 @@ public class GameController : MonoBehaviour
         }
     }
 
+    public void GameStart()
+    {
+        gameOn = true;
+        startMenu.SetActive(false);
+    }
+
     public void GameOver ()
     {
+        gameOn = false;
         timer.zeroTime ();
         uiText.text = "You died";
     }
