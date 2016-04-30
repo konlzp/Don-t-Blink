@@ -1,7 +1,7 @@
 ﻿using UnityEngine;
 using System.Collections;
 
-public class playerLoseGame : MonoBehaviour {
+public class PlayerLoseGame : MonoBehaviour {
 
 	public GameObject monsters;
     public GameController gameController;

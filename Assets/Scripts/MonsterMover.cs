@@ -35,6 +35,9 @@ public class MonsterMover : MonoBehaviour
         lightControl = spotlight.GetComponent<LightControl> ();
         animator = GetComponent<Animator> ();
         animation_ = GetComponent<Animation> ();
+
+        // Start animation
+        SetAnimationOn ();
     
         // Set up waypoints list
         foreach (Transform child in path.transform) {
@@ -43,7 +46,7 @@ public class MonsterMover : MonoBehaviour
         numWaypoints = waypoints.Count;
 
         // Start moving to first waypoint
-        StartMoveToNextWaypoint();
+        StartMoveToNextWaypoint ();
     }
 
     void FixedUpdate ()
@@ -53,7 +56,7 @@ public class MonsterMover : MonoBehaviour
         // ----+----------
         //  IN | STOP MOVE
         // OUT | MOVE MOVE
-        if (!IsAffectedByFlashlight () && !IsStunned () && !IsMainlightOn()) { // Move
+        if (!IsAffectedByFlashlight () && !IsStunned () && !IsMainlightOn ()) { // Move
             if (transform.position == nextWaypoint.position) { // Arrived at waypoint, need to move to next 
                 StartMoveToNextWaypoint ();
             } else {
@@ -62,7 +65,7 @@ public class MonsterMover : MonoBehaviour
 
                 // Face the waypoint
                 Vector3 targetDir = nextWaypoint.position - transform.position;
-                float step = rspeed * Time.deltaTime;
+                float step = rspeed * Time.fixedDeltaTime;
                 Vector3 newDir = Vector3.RotateTowards (transform.forward, targetDir, step, 0.0F);
                 Debug.DrawRay (transform.position, newDir, Color.red);
                 transform.rotation = Quaternion.LookRotation (newDir);
@@ -72,12 +75,13 @@ public class MonsterMover : MonoBehaviour
 
     void Update ()
     {
-        if (IsStunned () && !IsAffectedByFlashlight () && !IsMainlightOn()) { // Decrease stun
+        // Decrease stun if currentntly stunned and not affected by light
+        if (IsStunned () && !IsAffectedByFlashlight () && !IsMainlightOn ()) { // Decrease stun
             stunTime -= Time.deltaTime;
-            SetAnimationOn (true);
-        } else if (IsAffectedByFlashlight ()) { // Reset stun if light is on monster
+            SetAnimationOn ();
+        } else if (IsAffectedByFlashlight () || IsMainlightOn ()) { // Reset stun if light is on monster
             stunTime = STUN_DURATION;
-            SetAnimationOn (false);
+            SetAnimationOff ();
         }
     }
 
@@ -106,9 +110,9 @@ public class MonsterMover : MonoBehaviour
         }
     }
 
-    private void SetAnimationOn (bool on)
+    private void SetAnimationOn ()
     {
-        if (on && !animationOn) { // Turn on
+        if (!animationOn) { // Turn on
             Debug.Log ("Starting animation for " + gameObject.name);
             if (animator != null) {
                 animator.StartPlayback ();
@@ -116,7 +120,12 @@ public class MonsterMover : MonoBehaviour
                 animation_.Play ();
             }
             animationOn = true;
-        } else if (!on && animationOn) { // Turn off
+        }
+    }
+
+    private void SetAnimationOff ()
+    {
+        if (animationOn) { // Turn off
             Debug.Log ("Stopping animation for " + gameObject.name);
             if (animator != null) {
                 animator.Stop ();
@@ -127,7 +136,7 @@ public class MonsterMover : MonoBehaviour
         }
     }
 
-    private bool IsMainlightOn()
+    private bool IsMainlightOn ()
     {
         return mainLight.intensity != 0;
     }

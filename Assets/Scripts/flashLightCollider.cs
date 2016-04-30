@@ -1,7 +1,7 @@
 ﻿using UnityEngine;
 using System.Collections;
 
-public class flashLightCollider : MonoBehaviour {
+public class FlashLightCollider : MonoBehaviour {
 
     public GameObject monsters;
     public GameObject flashlight;
@@ -16,7 +16,7 @@ public class flashLightCollider : MonoBehaviour {
     }
 
 	void OnTriggerStay(Collider other){
-        //Make the monsters freeze!
+        // If other is monster && light is on
         if (other.gameObject.transform.parent.gameObject.name == monsters.name && lightController.getLightStatus())
         {
             monsterController.makeItScream();
