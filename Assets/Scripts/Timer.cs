@@ -6,6 +6,7 @@ public class Timer : MonoBehaviour {
 
 	public Text displayText;
 	public Text winText;
+    public GameController gameController;
 
 	private bool gameOver = false;
 
@@ -14,12 +15,10 @@ public class Timer : MonoBehaviour {
 
 	// Use this for initialization
 	void Start () {
-		Debug.Log ("Hello world!");
 		winText.text = "";
 		countTime = 360;
 		setTime();
-
-	
+        displayText.text = "";
 	}
 	
 	// Update is called once per frame
@@ -33,11 +32,9 @@ public class Timer : MonoBehaviour {
 
 	// update the display of timer and win text
 	void setTime(){
-		displayText.text = "Seconds left: " + countTime.ToString();
 		if (countTime <= 0 && gameOver == false) {
-			//winning state
+            gameController.GameWon();
 			countTime = 0;
-			displayText.text = "Seconds left: " + countTime.ToString();
 			winText.text = "YOU SURVIVED THE NIGHT";
 		}
 	}

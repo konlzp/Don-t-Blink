@@ -51,6 +51,12 @@ public class GameController : MonoBehaviour
         startMenu.SetActive(false);
     }
 
+    public void GameWon()
+    {
+        gameOn = false;
+        mainLight.intensity = 2;
+    }
+
     public void GameOver ()
     {
         gameOn = false;
