@@ -1,0 +1,70 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!21 &2100000
+Material:
+  serializedVersion: 6
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_Name: monster1B
+  m_Shader: {fileID: 4800000, guid: 3d9d650cb25e1eb498147e4eab339e30, type: 3}
+  m_ShaderKeywords: 
+  m_LightmapFlags: 5
+  m_CustomRenderQueue: -1
+  stringTagMap: {}
+  m_SavedProperties:
+    serializedVersion: 2
+    m_TexEnvs:
+      data:
+        first:
+          name: _MainTex
+        second:
+          m_Texture: {fileID: 0}
+          m_Scale: {x: 1, y: 1}
+          m_Offset: {x: 0, y: 0}
+      data:
+        first:
+          name: _diffusemap
+        second:
+          m_Texture: {fileID: 2800000, guid: 6f2ecc52c86780b4ba6d1eb2526a8bdb, type: 3}
+          m_Scale: {x: 1, y: 1}
+          m_Offset: {x: 0, y: 0}
+      data:
+        first:
+          name: _normalmap
+        second:
+          m_Texture: {fileID: 2800000, guid: f4d8ef14984de394ba9e968e769e031e, type: 3}
+          m_Scale: {x: 1, y: 1}
+          m_Offset: {x: 0, y: 0}
+      data:
+        first:
+          name: _specmap
+        second:
+          m_Texture: {fileID: 2800000, guid: 97c4432ce65e43a45a1603cc07abd9b1, type: 3}
+          m_Scale: {x: 1, y: 1}
+          m_Offset: {x: 0, y: 0}
+      data:
+        first:
+          name: _illumMask
+        second:
+          m_Texture: {fileID: 2800000, guid: b5f457de793f77e4ab38e2fe6da7d7ac, type: 3}
+          m_Scale: {x: 1, y: 1}
+          m_Offset: {x: 0, y: 0}
+    m_Floats:
+      data:
+        first:
+          name: _gloss
+        second: 0.08928571
+    m_Colors:
+      data:
+        first:
+          name: _Color
+        second: {r: 1, g: 1, b: 1, a: 1}
+      data:
+        first:
+          name: _subcolor
+        second: {r: 0.8897059, g: 0.77357495, b: 0.12429716, a: 1}
+      data:
+        first:
+          name: _illumColor
+        second: {r: 0.24540442, g: 0.6544118, b: 0.5190164, a: 1}

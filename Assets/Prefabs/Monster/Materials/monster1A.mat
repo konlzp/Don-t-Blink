@@ -1,0 +1,85 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!21 &2100000
+Material:
+  serializedVersion: 6
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_Name: monster1A
+  m_Shader: {fileID: 4800000, guid: 3d9d650cb25e1eb498147e4eab339e30, type: 3}
+  m_ShaderKeywords: 
+  m_LightmapFlags: 5
+  m_CustomRenderQueue: -1
+  stringTagMap: {}
+  m_SavedProperties:
+    serializedVersion: 2
+    m_TexEnvs:
+      data:
+        first:
+          name: _MainTex
+        second:
+          m_Texture: {fileID: 2800000, guid: 1f90b694ef4a15b439c744e29a945d5b, type: 3}
+          m_Scale: {x: 1, y: 1}
+          m_Offset: {x: 0, y: 0}
+      data:
+        first:
+          name: _BumpMap
+        second:
+          m_Texture: {fileID: 2800000, guid: e111608e912bf0a48a9d688b62758512, type: 3}
+          m_Scale: {x: 1, y: 1}
+          m_Offset: {x: 0, y: 0}
+      data:
+        first:
+          name: _diffusemap
+        second:
+          m_Texture: {fileID: 2800000, guid: 4ccaa63d86312af41895a24601dcb39a, type: 3}
+          m_Scale: {x: 1, y: 1}
+          m_Offset: {x: 0, y: 0}
+      data:
+        first:
+          name: _normalmap
+        second:
+          m_Texture: {fileID: 2800000, guid: e111608e912bf0a48a9d688b62758512, type: 3}
+          m_Scale: {x: 1, y: 1}
+          m_Offset: {x: 0, y: 0}
+      data:
+        first:
+          name: _specmap
+        second:
+          m_Texture: {fileID: 2800000, guid: 7be04f8cea6c2ac4eb1caa1762ab316e, type: 3}
+          m_Scale: {x: 1, y: 1}
+          m_Offset: {x: 0, y: 0}
+      data:
+        first:
+          name: _illumMask
+        second:
+          m_Texture: {fileID: 2800000, guid: b5f457de793f77e4ab38e2fe6da7d7ac, type: 3}
+          m_Scale: {x: 1, y: 1}
+          m_Offset: {x: 0, y: 0}
+    m_Floats:
+      data:
+        first:
+          name: _Shininess
+        second: 0.078125
+      data:
+        first:
+          name: _gloss
+        second: 0.071428575
+    m_Colors:
+      data:
+        first:
+          name: _Color
+        second: {r: 1, g: 1, b: 1, a: 1}
+      data:
+        first:
+          name: _SpecColor
+        second: {r: 0.5, g: 0.5, b: 0.5, a: 1}
+      data:
+        first:
+          name: _subcolor
+        second: {r: 0, g: 0.5448277, b: 1, a: 1}
+      data:
+        first:
+          name: _illumColor
+        second: {r: 1, g: 0.28194728, b: 0.11764705, a: 1}
