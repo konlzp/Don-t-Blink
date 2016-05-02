@@ -6,8 +6,8 @@ public class MonsterMover : MonoBehaviour
 {
     // Waypoint
     public GameObject path;
-    public float speed;
-    private float DEFAULT_SPEED;
+    public float defaultSpeed;
+    private float speed;
     private List<Transform> waypoints = new List<Transform> ();
     private int numWaypoints;
     private int waypointIndex = 0;
@@ -23,8 +23,7 @@ public class MonsterMover : MonoBehaviour
 
     // Animation
     private Animator animator = null;
-    // Underscore prevents naming warning
-    private Animation animation_ = null;
+    private Animation animation_ = null; // Underscore prevents naming warning
     private bool animationOn = false;
 
     // Mainlight
@@ -43,8 +42,8 @@ public class MonsterMover : MonoBehaviour
         // Start animation
         SetAnimationOn ();
 
-        DEFAULT_SPEED = speed;
-    
+        speed = defaultSpeed;
+
         // Set up waypoints list
         foreach (Transform child in path.transform) {
             waypoints.Add (child);
@@ -64,7 +63,7 @@ public class MonsterMover : MonoBehaviour
         // OUT | MOVE MOVE
 
         if (!IsAffectedByFlashlight () && !IsStunned () && !IsMainlightOn () && gameController.gameOn) { // Move
-            if (transform.position == nextWaypoint.position) { // Arrived at waypoint, need to move to next 
+            if (transform.position == nextWaypoint.position) { // Arrived at waypoint, need to move to next
                 StartMoveToNextWaypoint ();
             } else {
                 // Move object towards
@@ -121,7 +120,7 @@ public class MonsterMover : MonoBehaviour
                 SetSpeedToWaypointSpeed (ws);
                 PauseWaypoint (ws);
             }
-           
+
             waypointIndex++;
         }
     }
@@ -142,10 +141,10 @@ public class MonsterMover : MonoBehaviour
         if (waypointSpeed > 0.0F) {
             speed = waypointSpeed;
         } else {
-            speed = DEFAULT_SPEED;
+            speed = defaultSpeed;
         }
     }
-    
+
     private void SetAnimationOn ()
     {
         if (!animationOn) { // Turn on

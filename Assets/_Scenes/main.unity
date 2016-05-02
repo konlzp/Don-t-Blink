@@ -1112,6 +1112,7 @@ Canvas:
   m_ReceivesEvents: 1
   m_OverrideSorting: 0
   m_OverridePixelPerfect: 0
+  m_SortingBucketNormalizedSize: 0
   m_SortingLayerID: 0
   m_SortingOrder: 0
   m_TargetDisplay: 0
@@ -1652,7 +1653,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   path: {fileID: 1461531849}
-  speed: 0.03
+  defaultSpeed: 0.03
   spotlight: {fileID: 1988925789}
   mainLight: {fileID: 1492433208}
   gameController: {fileID: 2132658700}
@@ -9289,7 +9290,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   path: {fileID: 186674596}
-  speed: 0.1
+  defaultSpeed: 0.1
   spotlight: {fileID: 1988925789}
   mainLight: {fileID: 1492433208}
   gameController: {fileID: 2132658700}
@@ -11825,7 +11826,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   path: {fileID: 1930799979}
-  speed: 0.02
+  defaultSpeed: 0.02
   spotlight: {fileID: 1988925789}
   mainLight: {fileID: 1492433208}
   gameController: {fileID: 2132658700}
@@ -13643,7 +13644,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   path: {fileID: 799559038}
-  speed: 0.05
+  defaultSpeed: 0.05
   spotlight: {fileID: 1988925789}
   mainLight: {fileID: 1492433208}
   gameController: {fileID: 2132658700}
@@ -13824,6 +13825,7 @@ Canvas:
   m_ReceivesEvents: 1
   m_OverrideSorting: 0
   m_OverridePixelPerfect: 0
+  m_SortingBucketNormalizedSize: 0
   m_SortingLayerID: 0
   m_SortingOrder: 0
   m_TargetDisplay: 0
