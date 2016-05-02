@@ -4,6 +4,15 @@ using System.Collections.Generic;
 
 public class MonsterMover : MonoBehaviour
 {
+    public enum MonsterState
+    {
+        Moving,
+        Stunned,
+        Paused,
+    };
+
+    private MonsterState state = MonsterState.Paused;
+
     // Waypoint
     public GameObject path;
     public float defaultSpeed;
@@ -20,12 +29,13 @@ public class MonsterMover : MonoBehaviour
     private LightControl lightControl;
     private const float STUN_DURATION = 5.00F;
     private float stunTime = 0.0F;
+    private float pauseTime = 0.0F;
 
     // Animation
     private Animator animator = null;
     // Underscore prevents naming warning
     private Animation animation_ = null;
-    private bool animationOn = false;
+    private bool animationOn = true;
 
     // Mainlight
     public Light mainLight;
@@ -40,9 +50,10 @@ public class MonsterMover : MonoBehaviour
         animator = GetComponent<Animator> ();
         animation_ = GetComponent<Animation> ();
 
-        // Start animation
-        SetAnimationOn ();
+        // Stop animation
+        SetAnimationOff ();
 
+        // Set initial speed
         speed = defaultSpeed;
 
         // Set up waypoints list
@@ -57,7 +68,30 @@ public class MonsterMover : MonoBehaviour
 
     void Update ()
     {
-        if (!IsAffectedByFlashlight () && !IsStunned () && !IsMainlightOn () && gameController.gameOn) { // Move
+        if (!gameController.gameOn) {
+            return;
+        }
+
+        switch (state) {
+        case MonsterState.Moving:
+            HandleMovingState ();
+            break;
+        case MonsterState.Stunned:
+            HandleStunnedState ();
+            break;
+        case MonsterState.Paused:
+            HandlePausedState ();
+            break;
+        }
+    }
+
+    private void HandleMovingState ()
+    {
+        // Go to Stunned state if affected by flashlight or mainlight
+        if (IsAffectedByFlashlight () || IsMainlightOn ()) {
+            SetAnimationOff ();
+            state = MonsterState.Stunned;
+        } else {
             if (transform.position == nextWaypoint.position) { // Arrived at waypoint, need to move to next
                 StartMoveToNextWaypoint ();
             } else {
@@ -72,16 +106,34 @@ public class MonsterMover : MonoBehaviour
                 transform.rotation = Quaternion.LookRotation (newDir);
             }
         }
+    }
 
-        // Decrease stun if currentntly stunned and not affected by light
-        if (IsStunned () && !IsAffectedByFlashlight () && !IsMainlightOn () && gameController.gameOn) { // Decrease stun
+    private void HandleStunnedState ()
+    {
+        // Decrease stun if currently stunned and not affected by light
+        if (!IsAffectedByFlashlight () && !IsMainlightOn () && gameController.gameOn) { // Decrease stun
             stunTime -= Time.deltaTime;
-            SetAnimationOn ();
         } else if (IsAffectedByFlashlight () || IsMainlightOn ()) { // Reset stun if light is on monster
             if (stunTime < STUN_DURATION) {
                 stunTime = STUN_DURATION;
             }
-            SetAnimationOff ();
+        }
+
+        // Set state to Moving if stun time runs out
+        if (stunTime <= 0.0F) {
+            SetAnimationOn ();
+            state = MonsterState.Moving;
+        }
+    }
+
+    private void HandlePausedState ()
+    {
+        pauseTime -= Time.deltaTime;
+
+        // Set state to Moving if pause timer runs out
+        if (pauseTime <= 0.0F) {
+            SetAnimationOn ();
+            state = MonsterState.Moving; 
         }
     }
 
@@ -109,23 +161,24 @@ public class MonsterMover : MonoBehaviour
             WaypointSetting ws = nextWaypoint.gameObject.GetComponent<WaypointSetting> ();
             if (ws != null) {
                 SetSpeedToWaypointSpeed (ws);
-                PauseWaypoint (ws);
+                SetPauseToWaypointPause (ws);
             }
 
             waypointIndex++;
         }
     }
 
-    // Sets the stun time of monster to waypoint's pauseTime if it is > 0
-    private void PauseWaypoint (WaypointSetting ws)
+    // Change to Paused state if there is a pause time
+    private void SetPauseToWaypointPause (WaypointSetting ws)
     {
-        float pauseTime = ws.pauseTime;
+        pauseTime = ws.pauseTime;
         if (pauseTime > 0.0F) {
-            stunTime = pauseTime;
+            SetAnimationOff ();
+            state = MonsterState.Paused;
         }
     }
 
-    // Sets speed of monster to waypoint's speed if it is > 0
+    // Sets speed of monster to waypoint's speed if it is > 0, otherwise set it to default speed
     private void SetSpeedToWaypointSpeed (WaypointSetting ws)
     {
         float waypointSpeed = ws.speed;
@@ -172,8 +225,8 @@ public class MonsterMover : MonoBehaviour
         return collided && lightControl.getLightStatus ();
     }
 
-    private bool IsStunned ()
+    public MonsterState GetState ()
     {
-        return stunTime > 0.0F;
+        return state;
     }
 }
