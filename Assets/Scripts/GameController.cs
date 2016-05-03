@@ -11,10 +11,10 @@ public class GameController : MonoBehaviour
     public Light mainLight;
     public AudioClip backGroundMusic;
     public AudioClip lullabyMusic;
-    public bool gameOn = false;
     public GameObject startMenu;
     public GameObject gameUI;
 
+    private bool gameOn = false;
     private AudioSource audioSource;
 
     // Use this for initialization
@@ -47,13 +47,13 @@ public class GameController : MonoBehaviour
         }
     }
 
-    public void GameStart()
+    public void GameStart ()
     {
         gameOn = true;
-        gameUI.SetActive(true);
+        gameUI.SetActive (true);
     }
 
-    public void GameWon()
+    public void GameWon ()
     {
         gameOn = false;
         mainLight.intensity = 2;
@@ -64,5 +64,9 @@ public class GameController : MonoBehaviour
         gameOn = false;
         timer.zeroTime ();
         uiText.text = "You died";
+    }
+        
+    public bool IsGameActive {
+        get { return gameOn; }
     }
 }

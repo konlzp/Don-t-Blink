@@ -68,7 +68,7 @@ public class MonsterMover : MonoBehaviour
 
     void Update ()
     {
-        if (!gameController.gameOn) {
+        if (!gameController.IsGameActive) {
             return;
         }
 
@@ -111,7 +111,7 @@ public class MonsterMover : MonoBehaviour
     private void HandleStunnedState ()
     {
         // Decrease stun if currently stunned and not affected by light
-        if (!IsAffectedByFlashlight () && !IsMainlightOn () && gameController.gameOn) { // Decrease stun
+        if (!IsAffectedByFlashlight () && !IsMainlightOn () && gameController.IsGameActive) { // Decrease stun
             stunTime -= Time.deltaTime;
         } else if (IsAffectedByFlashlight () || IsMainlightOn ()) { // Reset stun if light is on monster
             if (stunTime < STUN_DURATION) {
@@ -222,11 +222,10 @@ public class MonsterMover : MonoBehaviour
 
     private bool IsAffectedByFlashlight ()
     {
-        return collided && lightControl.getLightStatus ();
+        return collided && lightControl.IsLightOn;
     }
 
-    public MonsterState GetState ()
-    {
-        return state;
+    public MonsterState State {
+        get { return state; }
     }
 }

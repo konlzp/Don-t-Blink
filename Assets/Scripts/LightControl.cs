@@ -76,9 +76,8 @@ public class LightControl : MonoBehaviour {
         lightOn = false;
     }
 
-    public bool getLightStatus()
-    {
-        return lightOn;
+    public bool IsLightOn {
+        get { return lightOn; }
     }
 
     void FlashlightControl()
@@ -134,7 +133,7 @@ public class LightControl : MonoBehaviour {
 	// Update is called once per frame
 	void Update () {
         
-        if (!gameController.gameOn)
+        if (!gameController.IsGameActive)
         {
             return;
         }

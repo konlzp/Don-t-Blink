@@ -6,10 +6,8 @@ public class PlayerController : MonoBehaviour
 
     public GameController gameController;
     public AudioClip monsterScream;
-    public float screamInterval;
 
     private AudioSource monsterSound;
-    private float nextScream = 0;
     
     private new Light light;
 
@@ -28,13 +26,11 @@ public class PlayerController : MonoBehaviour
             light.intensity = 2;
         }
     }
-       
+
     public void PlayScreamSound ()
     {
-        if (!monsterSound.isPlaying && Time.time > nextScream) {
-            monsterSound.clip = monsterScream;
-            monsterSound.Play ();
-            nextScream = Time.time + screamInterval;
-        }
+        monsterSound.clip = monsterScream;
+        monsterSound.Play ();
+
     }
 }

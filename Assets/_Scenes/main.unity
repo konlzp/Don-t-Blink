@@ -20,7 +20,7 @@ RenderSettings:
   m_FogDensity: 0.01
   m_LinearFogStart: 0
   m_LinearFogEnd: 300
-  m_AmbientSkyColor: {r: 0.066176474, g: 0.066176474, b: 0.066176474, a: 1}
+  m_AmbientSkyColor: {r: 1, g: 1, b: 1, a: 1}
   m_AmbientEquatorColor: {r: 0.114, g: 0.125, b: 0.133, a: 1}
   m_AmbientGroundColor: {r: 0.047, g: 0.043, b: 0.035, a: 1}
   m_AmbientIntensity: 0.3
@@ -1644,7 +1644,7 @@ Transform:
   m_Children:
   - {fileID: 374173277}
   m_Father: {fileID: 2083377714}
-  m_RootOrder: 3
+  m_RootOrder: 0
 --- !u!114 &264100270
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -13345,7 +13345,6 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   gameController: {fileID: 2132658700}
   monsterScream: {fileID: 8300000, guid: 179d3e8d8c0ee2141a6104b5b1e6bce6, type: 3}
-  screamInterval: 2
 --- !u!136 &1988925795
 CapsuleCollider:
   m_ObjectHideFlags: 0
@@ -14016,10 +14015,10 @@ Transform:
   m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
+  - {fileID: 264100268}
   - {fileID: 1402943822}
   - {fileID: 2013149635}
   - {fileID: 1809780011}
-  - {fileID: 264100268}
   m_Father: {fileID: 0}
   m_RootOrder: 6
 --- !u!82 &2083377715
@@ -14401,7 +14400,6 @@ MonoBehaviour:
   mainLight: {fileID: 1492433208}
   backGroundMusic: {fileID: 8300000, guid: 5cd4e10be73e7db4c93b03086de51a44, type: 3}
   lullabyMusic: {fileID: 8300000, guid: 05bf7500331e47b43aebc00d1e7fb968, type: 3}
-  gameOn: 0
   startMenu: {fileID: 2047274420}
   gameUI: {fileID: 183507736}
 --- !u!82 &2132658701
