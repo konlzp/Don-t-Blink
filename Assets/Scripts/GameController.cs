@@ -13,6 +13,7 @@ public class GameController : MonoBehaviour
     public AudioClip lullabyMusic;
     public bool gameOn = false;
     public GameObject startMenu;
+    public GameObject gameUI;
 
     private AudioSource audioSource;
 
@@ -20,6 +21,7 @@ public class GameController : MonoBehaviour
     void Start ()
     {
         audioSource = GetComponent<AudioSource> ();
+        gameUI.SetActive (false);
     }
 	
     // Update is called once per frame
@@ -48,7 +50,7 @@ public class GameController : MonoBehaviour
     public void GameStart()
     {
         gameOn = true;
-        startMenu.SetActive(false);
+        gameUI.SetActive(true);
     }
 
     public void GameWon()

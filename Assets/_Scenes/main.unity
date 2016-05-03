@@ -943,7 +943,7 @@ Prefab:
       objectReference: {fileID: 0}
     - target: {fileID: 400058, guid: d97b025b4f6d2964e929ae3f8fdc85f1, type: 3}
       propertyPath: m_RootOrder
-      value: 2
+      value: 3
       objectReference: {fileID: 0}
     - target: {fileID: 400002, guid: d97b025b4f6d2964e929ae3f8fdc85f1, type: 3}
       propertyPath: m_LocalRotation.x
@@ -988,6 +988,10 @@ Prefab:
     - target: {fileID: 100058, guid: d97b025b4f6d2964e929ae3f8fdc85f1, type: 3}
       propertyPath: m_IsActive
       value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 100058, guid: d97b025b4f6d2964e929ae3f8fdc85f1, type: 3}
+      propertyPath: m_TagString
+      value: Monster
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: d97b025b4f6d2964e929ae3f8fdc85f1, type: 3}
@@ -1623,7 +1627,7 @@ GameObject:
   - 114: {fileID: 264100270}
   m_Layer: 0
   m_Name: monster1
-  m_TagString: Untagged
+  m_TagString: Monster
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -1653,7 +1657,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   path: {fileID: 1461531849}
-  defaultSpeed: 0.03
+  defaultSpeed: 0.3
   spotlight: {fileID: 1988925789}
   mainLight: {fileID: 1492433208}
   gameController: {fileID: 2132658700}
@@ -9194,7 +9198,7 @@ Prefab:
       objectReference: {fileID: 0}
     - target: {fileID: 400108, guid: 059659377357c7f4da639e9b3ab32204, type: 3}
       propertyPath: m_RootOrder
-      value: 0
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 400000, guid: 059659377357c7f4da639e9b3ab32204, type: 3}
       propertyPath: m_LocalRotation.x
@@ -9227,6 +9231,10 @@ Prefab:
     - target: {fileID: 100108, guid: 059659377357c7f4da639e9b3ab32204, type: 3}
       propertyPath: m_IsActive
       value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 100108, guid: 059659377357c7f4da639e9b3ab32204, type: 3}
+      propertyPath: m_TagString
+      value: Monster
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 059659377357c7f4da639e9b3ab32204, type: 3}
@@ -11404,7 +11412,7 @@ Prefab:
       objectReference: {fileID: 0}
     - target: {fileID: 400020, guid: f39b1400e9461b94aa1ef06930d090b5, type: 3}
       propertyPath: m_RootOrder
-      value: 1
+      value: 2
       objectReference: {fileID: 0}
     - target: {fileID: 400020, guid: f39b1400e9461b94aa1ef06930d090b5, type: 3}
       propertyPath: m_LocalScale.x
@@ -11425,6 +11433,10 @@ Prefab:
     - target: {fileID: 100020, guid: f39b1400e9461b94aa1ef06930d090b5, type: 3}
       propertyPath: m_IsActive
       value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 100020, guid: f39b1400e9461b94aa1ef06930d090b5, type: 3}
+      propertyPath: m_TagString
+      value: Monster
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: f39b1400e9461b94aa1ef06930d090b5, type: 3}
@@ -13328,11 +13340,12 @@ MonoBehaviour:
   m_GameObject: {fileID: 1988925789}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 45f650b6d831746a380a3831ed12b91e, type: 3}
+  m_Script: {fileID: 11500000, guid: 41c600d6b7ba64fd2ba455cd7612cc0b, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  monsters: {fileID: 2083377713}
   gameController: {fileID: 2132658700}
+  monsterScream: {fileID: 8300000, guid: 179d3e8d8c0ee2141a6104b5b1e6bce6, type: 3}
+  screamInterval: 2
 --- !u!136 &1988925795
 CapsuleCollider:
   m_ObjectHideFlags: 0
@@ -13848,7 +13861,6 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   gameController: {fileID: 2132658700}
-  gameUI: {fileID: 183507736}
 --- !u!4 &2064232000 stripped
 Transform:
   m_PrefabParentObject: {fileID: 449218, guid: e3c25ae104ea743b6a954c38fc7f6892, type: 2}
@@ -13986,7 +13998,6 @@ GameObject:
   serializedVersion: 4
   m_Component:
   - 4: {fileID: 2083377714}
-  - 114: {fileID: 2083377716}
   - 82: {fileID: 2083377715}
   m_Layer: 0
   m_Name: Monsters
@@ -14085,19 +14096,6 @@ AudioSource:
     m_PreInfinity: 2
     m_PostInfinity: 2
     m_RotationOrder: 0
---- !u!114 &2083377716
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_PrefabParentObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 0}
-  m_GameObject: {fileID: 2083377713}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 646c6963bbdc5fd4a8c4d5404fe535a8, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  monsterScream: {fileID: 8300000, guid: 179d3e8d8c0ee2141a6104b5b1e6bce6, type: 3}
-  screamInterval: 5
 --- !u!1 &2088013644
 GameObject:
   m_ObjectHideFlags: 0
@@ -14405,6 +14403,7 @@ MonoBehaviour:
   lullabyMusic: {fileID: 8300000, guid: 05bf7500331e47b43aebc00d1e7fb968, type: 3}
   gameOn: 0
   startMenu: {fileID: 2047274420}
+  gameUI: {fileID: 183507736}
 --- !u!82 &2132658701
 AudioSource:
   m_ObjectHideFlags: 0
