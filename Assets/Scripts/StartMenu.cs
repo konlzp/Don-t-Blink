@@ -2,23 +2,24 @@
 using UnityEngine.UI;
 using System.Collections;
 
-public class StartMenu : MonoBehaviour {
+public class StartMenu : MonoBehaviour
+{
     public GameController gameController;
     public GameObject gameUI;
 
-    void Start()
+    void Start ()
     {
-        gameUI.SetActive(false);
+        gameUI.SetActive (false);
     }
 
-	public void GameStart()
+    public void Play ()
     {
-        gameUI.SetActive(true);
-        gameController.GameStart();
+        gameUI.SetActive (true);
+        gameController.GameStart ();
     }
 
-    public void GameExit()
+    public void Exit ()
     {
-        Application.Quit();
+        Application.Quit ();
     }
 }
