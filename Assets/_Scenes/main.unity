@@ -1782,19 +1782,6 @@ Rigidbody:
   m_Interpolate: 0
   m_Constraints: 0
   m_CollisionDetection: 0
---- !u!114 &277640993
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_PrefabParentObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 0}
-  m_GameObject: {fileID: 277640986}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 35a94791a223f4284a48beb35f2d6cdb, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  monsters: {fileID: 2083377713}
-  spotlight: {fileID: 1988925789}
 --- !u!4 &281176084 stripped
 Transform:
   m_PrefabParentObject: {fileID: 449218, guid: e3c25ae104ea743b6a954c38fc7f6892, type: 2}
