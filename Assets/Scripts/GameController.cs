@@ -50,6 +50,7 @@ public class GameController : MonoBehaviour
     public void GameStart ()
     {
         gameOn = true;
+        Cursor.visible = false;
         gameUI.SetActive (true);
     }
 

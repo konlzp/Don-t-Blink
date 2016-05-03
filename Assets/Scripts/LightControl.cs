@@ -25,6 +25,7 @@ public class LightControl : MonoBehaviour {
     private Image sliderFill;
     private Color deadFlashlight = new Color(110.0f / 255, 90.0f / 255, 80.0f / 255);
     private int momCount = 0;
+    private bool momCalled = false;
 
     // Use this for initialization
     void Start () {
@@ -124,10 +125,12 @@ public class LightControl : MonoBehaviour {
 
     IEnumerator CallMom()
     {
+        momCalled = true;
         yield return new WaitForSeconds(2f);
         mainLight.intensity = 1.5f;
         yield return new WaitForSeconds(5);
         mainLight.intensity = 0;
+        momCalled = false;
     }
 	
 	// Update is called once per frame
@@ -145,7 +148,7 @@ public class LightControl : MonoBehaviour {
             RechargeFlashlight();
         }
 
-        if (Input.GetKeyDown(KeyCode.M))
+        if (Input.GetKeyDown(KeyCode.M) && !momCalled)
         {
             audioSource.clip = momClip;
             audioSource.Play();
