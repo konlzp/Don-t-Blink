@@ -3,6 +3,7 @@ guid: d8e6116652f17784087610025c66ec2e
 ModelImporter:
   serializedVersion: 19
   fileIDToRecycleName:
+    0: monster1Air //// lookat
     100000: armor
     100002: body
     100004: chest
@@ -180,7 +181,773 @@ ModelImporter:
     7400020: monster1Hit1
     7400022: monster1Hit2
     7400024: monster1Die
-    9500000: //RootNode
+    7400026: monster1Idle //// lookat
+    7400028: monster1WalkNormal //// lookat
+    7400030: monster1Run //// lookat
+    7400032: monster1Jump //// lookat
+    7400034: monster1Air //// lookat
+    7400036: monster1Land //// lookat
+    7400038: monster1AssScratch //// lookat
+    7400040: monster1Taunt //// lookat
+    7400042: monster1Attack1 //// lookat
+    7400044: monster1Attack2 //// lookat
+    7400046: monster1Hit1 //// lookat
+    7400048: monster1Hit2 //// lookat
+    7400050: monster1Die //// lookat
+    7400052: monster1Idle //// L_FOOT
+    7400054: monster1WalkNormal //// L_FOOT
+    7400056: monster1Run //// L_FOOT
+    7400058: monster1Jump //// L_FOOT
+    7400060: monster1Air //// L_FOOT
+    7400062: monster1Land //// L_FOOT
+    7400064: monster1AssScratch //// L_FOOT
+    7400066: monster1Taunt //// L_FOOT
+    7400068: monster1Attack1 //// L_FOOT
+    7400070: monster1Attack2 //// L_FOOT
+    7400072: monster1Hit1 //// L_FOOT
+    7400074: monster1Hit2 //// L_FOOT
+    7400076: monster1Die //// L_FOOT
+    7400078: monster1Idle //// R_FOOT
+    7400080: monster1WalkNormal //// R_FOOT
+    7400082: monster1Run //// R_FOOT
+    7400084: monster1Jump //// R_FOOT
+    7400086: monster1Air //// R_FOOT
+    7400088: monster1Land //// R_FOOT
+    7400090: monster1AssScratch //// R_FOOT
+    7400092: monster1Taunt //// R_FOOT
+    7400094: monster1Attack1 //// R_FOOT
+    7400096: monster1Attack2 //// R_FOOT
+    7400098: monster1Hit1 //// R_FOOT
+    7400100: monster1Hit2 //// R_FOOT
+    7400102: monster1Die //// R_FOOT
+    7400104: monster1Idle //// hipcontrol
+    7400106: monster1WalkNormal //// hipcontrol
+    7400108: monster1Run //// hipcontrol
+    7400110: monster1Jump //// hipcontrol
+    7400112: monster1Air //// hipcontrol
+    7400114: monster1Land //// hipcontrol
+    7400116: monster1AssScratch //// hipcontrol
+    7400118: monster1Taunt //// hipcontrol
+    7400120: monster1Attack1 //// hipcontrol
+    7400122: monster1Attack2 //// hipcontrol
+    7400124: monster1Hit1 //// hipcontrol
+    7400126: monster1Hit2 //// hipcontrol
+    7400128: monster1Die //// hipcontrol
+    7400130: monster1Idle //// headcontrol
+    7400132: monster1WalkNormal //// headcontrol
+    7400134: monster1Run //// headcontrol
+    7400136: monster1Jump //// headcontrol
+    7400138: monster1Air //// headcontrol
+    7400140: monster1Land //// headcontrol
+    7400142: monster1AssScratch //// headcontrol
+    7400144: monster1Taunt //// headcontrol
+    7400146: monster1Attack1 //// headcontrol
+    7400148: monster1Attack2 //// headcontrol
+    7400150: monster1Hit1 //// headcontrol
+    7400152: monster1Hit2 //// headcontrol
+    7400154: monster1Die //// headcontrol
+    7400156: monster1Idle //// spinecontrol
+    7400158: monster1WalkNormal //// spinecontrol
+    7400160: monster1Run //// spinecontrol
+    7400162: monster1Jump //// spinecontrol
+    7400164: monster1Air //// spinecontrol
+    7400166: monster1Land //// spinecontrol
+    7400168: monster1AssScratch //// spinecontrol
+    7400170: monster1Taunt //// spinecontrol
+    7400172: monster1Attack1 //// spinecontrol
+    7400174: monster1Attack2 //// spinecontrol
+    7400176: monster1Hit1 //// spinecontrol
+    7400178: monster1Hit2 //// spinecontrol
+    7400180: monster1Die //// spinecontrol
+    7400182: monster1Idle //// chestcontrol
+    7400184: monster1WalkNormal //// chestcontrol
+    7400186: monster1Run //// chestcontrol
+    7400188: monster1Jump //// chestcontrol
+    7400190: monster1Air //// chestcontrol
+    7400192: monster1Land //// chestcontrol
+    7400194: monster1AssScratch //// chestcontrol
+    7400196: monster1Taunt //// chestcontrol
+    7400198: monster1Attack1 //// chestcontrol
+    7400200: monster1Attack2 //// chestcontrol
+    7400202: monster1Hit1 //// chestcontrol
+    7400204: monster1Hit2 //// chestcontrol
+    7400206: monster1Die //// chestcontrol
+    7400208: monster1Idle //// L_plate_Goal
+    7400210: monster1WalkNormal //// L_plate_Goal
+    7400212: monster1Run //// L_plate_Goal
+    7400214: monster1Jump //// L_plate_Goal
+    7400216: monster1Air //// L_plate_Goal
+    7400218: monster1Land //// L_plate_Goal
+    7400220: monster1AssScratch //// L_plate_Goal
+    7400222: monster1Taunt //// L_plate_Goal
+    7400224: monster1Attack1 //// L_plate_Goal
+    7400226: monster1Attack2 //// L_plate_Goal
+    7400228: monster1Hit1 //// L_plate_Goal
+    7400230: monster1Hit2 //// L_plate_Goal
+    7400232: monster1Die //// L_plate_Goal
+    7400234: monster1Idle //// L_wrist_Goal
+    7400236: monster1WalkNormal //// L_wrist_Goal
+    7400238: monster1Run //// L_wrist_Goal
+    7400240: monster1Jump //// L_wrist_Goal
+    7400242: monster1Air //// L_wrist_Goal
+    7400244: monster1Land //// L_wrist_Goal
+    7400246: monster1AssScratch //// L_wrist_Goal
+    7400248: monster1Taunt //// L_wrist_Goal
+    7400250: monster1Attack1 //// L_wrist_Goal
+    7400252: monster1Attack2 //// L_wrist_Goal
+    7400254: monster1Hit1 //// L_wrist_Goal
+    7400256: monster1Hit2 //// L_wrist_Goal
+    7400258: monster1Die //// L_wrist_Goal
+    7400260: monster1Idle //// R_armcontrol
+    7400262: monster1WalkNormal //// R_armcontrol
+    7400264: monster1Run //// R_armcontrol
+    7400266: monster1Jump //// R_armcontrol
+    7400268: monster1Air //// R_armcontrol
+    7400270: monster1Land //// R_armcontrol
+    7400272: monster1AssScratch //// R_armcontrol
+    7400274: monster1Taunt //// R_armcontrol
+    7400276: monster1Attack1 //// R_armcontrol
+    7400278: monster1Attack2 //// R_armcontrol
+    7400280: monster1Hit1 //// R_armcontrol
+    7400282: monster1Hit2 //// R_armcontrol
+    7400284: monster1Die //// R_armcontrol
+    7400286: monster1Idle //// R_plate_Goal
+    7400288: monster1WalkNormal //// R_plate_Goal
+    7400290: monster1Run //// R_plate_Goal
+    7400292: monster1Jump //// R_plate_Goal
+    7400294: monster1Air //// R_plate_Goal
+    7400296: monster1Land //// R_plate_Goal
+    7400298: monster1AssScratch //// R_plate_Goal
+    7400300: monster1Taunt //// R_plate_Goal
+    7400302: monster1Attack1 //// R_plate_Goal
+    7400304: monster1Attack2 //// R_plate_Goal
+    7400306: monster1Hit1 //// R_plate_Goal
+    7400308: monster1Hit2 //// R_plate_Goal
+    7400310: monster1Die //// R_plate_Goal
+    7400312: monster1Idle //// R_arm_Pole
+    7400314: monster1WalkNormal //// R_arm_Pole
+    7400316: monster1Run //// R_arm_Pole
+    7400318: monster1Jump //// R_arm_Pole
+    7400320: monster1Air //// R_arm_Pole
+    7400322: monster1Land //// R_arm_Pole
+    7400324: monster1AssScratch //// R_arm_Pole
+    7400326: monster1Taunt //// R_arm_Pole
+    7400328: monster1Attack1 //// R_arm_Pole
+    7400330: monster1Attack2 //// R_arm_Pole
+    7400332: monster1Hit1 //// R_arm_Pole
+    7400334: monster1Hit2 //// R_arm_Pole
+    7400336: monster1Die //// R_arm_Pole
+    7400338: monster1Idle //// R_wrist_Goal
+    7400340: monster1WalkNormal //// R_wrist_Goal
+    7400342: monster1Run //// R_wrist_Goal
+    7400344: monster1Jump //// R_wrist_Goal
+    7400346: monster1Air //// R_wrist_Goal
+    7400348: monster1Land //// R_wrist_Goal
+    7400350: monster1AssScratch //// R_wrist_Goal
+    7400352: monster1Taunt //// R_wrist_Goal
+    7400354: monster1Attack1 //// R_wrist_Goal
+    7400356: monster1Attack2 //// R_wrist_Goal
+    7400358: monster1Hit1 //// R_wrist_Goal
+    7400360: monster1Hit2 //// R_wrist_Goal
+    7400362: monster1Die //// R_wrist_Goal
+    7400364: monster1Idle //// L_leg_Pole
+    7400366: monster1WalkNormal //// L_leg_Pole
+    7400368: monster1Run //// L_leg_Pole
+    7400370: monster1Jump //// L_leg_Pole
+    7400372: monster1Air //// L_leg_Pole
+    7400374: monster1Land //// L_leg_Pole
+    7400376: monster1AssScratch //// L_leg_Pole
+    7400378: monster1Taunt //// L_leg_Pole
+    7400380: monster1Attack1 //// L_leg_Pole
+    7400382: monster1Attack2 //// L_leg_Pole
+    7400384: monster1Hit1 //// L_leg_Pole
+    7400386: monster1Hit2 //// L_leg_Pole
+    7400388: monster1Die //// L_leg_Pole
+    7400390: monster1Idle //// R_leg_Pole
+    7400392: monster1WalkNormal //// R_leg_Pole
+    7400394: monster1Run //// R_leg_Pole
+    7400396: monster1Jump //// R_leg_Pole
+    7400398: monster1Air //// R_leg_Pole
+    7400400: monster1Land //// R_leg_Pole
+    7400402: monster1AssScratch //// R_leg_Pole
+    7400404: monster1Taunt //// R_leg_Pole
+    7400406: monster1Attack1 //// R_leg_Pole
+    7400408: monster1Attack2 //// R_leg_Pole
+    7400410: monster1Hit1 //// R_leg_Pole
+    7400412: monster1Hit2 //// R_leg_Pole
+    7400414: monster1Die //// R_leg_Pole
+    7400416: monster1Idle //// hips
+    7400418: monster1WalkNormal //// hips
+    7400420: monster1Run //// hips
+    7400422: monster1Jump //// hips
+    7400424: monster1Air //// hips
+    7400426: monster1Land //// hips
+    7400428: monster1AssScratch //// hips
+    7400430: monster1Taunt //// hips
+    7400432: monster1Attack1 //// hips
+    7400434: monster1Attack2 //// hips
+    7400436: monster1Hit1 //// hips
+    7400438: monster1Hit2 //// hips
+    7400440: monster1Die //// hips
+    7400442: monster1Idle //// L_leg
+    7400444: monster1WalkNormal //// L_leg
+    7400446: monster1Run //// L_leg
+    7400448: monster1Jump //// L_leg
+    7400450: monster1Air //// L_leg
+    7400452: monster1Land //// L_leg
+    7400454: monster1AssScratch //// L_leg
+    7400456: monster1Taunt //// L_leg
+    7400458: monster1Attack1 //// L_leg
+    7400460: monster1Attack2 //// L_leg
+    7400462: monster1Hit1 //// L_leg
+    7400464: monster1Hit2 //// L_leg
+    7400466: monster1Die //// L_leg
+    7400468: monster1Idle //// L_knee
+    7400470: monster1WalkNormal //// L_knee
+    7400472: monster1Run //// L_knee
+    7400474: monster1Jump //// L_knee
+    7400476: monster1Air //// L_knee
+    7400478: monster1Land //// L_knee
+    7400480: monster1AssScratch //// L_knee
+    7400482: monster1Taunt //// L_knee
+    7400484: monster1Attack1 //// L_knee
+    7400486: monster1Attack2 //// L_knee
+    7400488: monster1Hit1 //// L_knee
+    7400490: monster1Hit2 //// L_knee
+    7400492: monster1Die //// L_knee
+    7400494: monster1Idle //// L_ankle
+    7400496: monster1WalkNormal //// L_ankle
+    7400498: monster1Run //// L_ankle
+    7400500: monster1Jump //// L_ankle
+    7400502: monster1Air //// L_ankle
+    7400504: monster1Land //// L_ankle
+    7400506: monster1AssScratch //// L_ankle
+    7400508: monster1Taunt //// L_ankle
+    7400510: monster1Attack1 //// L_ankle
+    7400512: monster1Attack2 //// L_ankle
+    7400514: monster1Hit1 //// L_ankle
+    7400516: monster1Hit2 //// L_ankle
+    7400518: monster1Die //// L_ankle
+    7400520: monster1Idle //// R_leg
+    7400522: monster1WalkNormal //// R_leg
+    7400524: monster1Run //// R_leg
+    7400526: monster1Jump //// R_leg
+    7400528: monster1Air //// R_leg
+    7400530: monster1Land //// R_leg
+    7400532: monster1AssScratch //// R_leg
+    7400534: monster1Taunt //// R_leg
+    7400536: monster1Attack1 //// R_leg
+    7400538: monster1Attack2 //// R_leg
+    7400540: monster1Hit1 //// R_leg
+    7400542: monster1Hit2 //// R_leg
+    7400544: monster1Die //// R_leg
+    7400546: monster1Idle //// R_knee
+    7400548: monster1WalkNormal //// R_knee
+    7400550: monster1Run //// R_knee
+    7400552: monster1Jump //// R_knee
+    7400554: monster1Air //// R_knee
+    7400556: monster1Land //// R_knee
+    7400558: monster1AssScratch //// R_knee
+    7400560: monster1Taunt //// R_knee
+    7400562: monster1Attack1 //// R_knee
+    7400564: monster1Attack2 //// R_knee
+    7400566: monster1Hit1 //// R_knee
+    7400568: monster1Hit2 //// R_knee
+    7400570: monster1Die //// R_knee
+    7400572: monster1Idle //// R_ankle
+    7400574: monster1WalkNormal //// R_ankle
+    7400576: monster1Run //// R_ankle
+    7400578: monster1Jump //// R_ankle
+    7400580: monster1Air //// R_ankle
+    7400582: monster1Land //// R_ankle
+    7400584: monster1AssScratch //// R_ankle
+    7400586: monster1Taunt //// R_ankle
+    7400588: monster1Attack1 //// R_ankle
+    7400590: monster1Attack2 //// R_ankle
+    7400592: monster1Hit1 //// R_ankle
+    7400594: monster1Hit2 //// R_ankle
+    7400596: monster1Die //// R_ankle
+    7400598: monster1Idle //// spine
+    7400600: monster1WalkNormal //// spine
+    7400602: monster1Run //// spine
+    7400604: monster1Jump //// spine
+    7400606: monster1Air //// spine
+    7400608: monster1Land //// spine
+    7400610: monster1AssScratch //// spine
+    7400612: monster1Taunt //// spine
+    7400614: monster1Attack1 //// spine
+    7400616: monster1Attack2 //// spine
+    7400618: monster1Hit1 //// spine
+    7400620: monster1Hit2 //// spine
+    7400622: monster1Die //// spine
+    7400624: monster1Idle //// chest
+    7400626: monster1WalkNormal //// chest
+    7400628: monster1Run //// chest
+    7400630: monster1Jump //// chest
+    7400632: monster1Air //// chest
+    7400634: monster1Land //// chest
+    7400636: monster1AssScratch //// chest
+    7400638: monster1Taunt //// chest
+    7400640: monster1Attack1 //// chest
+    7400642: monster1Attack2 //// chest
+    7400644: monster1Hit1 //// chest
+    7400646: monster1Hit2 //// chest
+    7400648: monster1Die //// chest
+    7400650: monster1Idle //// L_shoulder
+    7400652: monster1WalkNormal //// L_shoulder
+    7400654: monster1Run //// L_shoulder
+    7400656: monster1Jump //// L_shoulder
+    7400658: monster1Air //// L_shoulder
+    7400660: monster1Land //// L_shoulder
+    7400662: monster1AssScratch //// L_shoulder
+    7400664: monster1Taunt //// L_shoulder
+    7400666: monster1Attack1 //// L_shoulder
+    7400668: monster1Attack2 //// L_shoulder
+    7400670: monster1Hit1 //// L_shoulder
+    7400672: monster1Hit2 //// L_shoulder
+    7400674: monster1Die //// L_shoulder
+    7400676: monster1Idle //// L_plate
+    7400678: monster1WalkNormal //// L_plate
+    7400680: monster1Run //// L_plate
+    7400682: monster1Jump //// L_plate
+    7400684: monster1Air //// L_plate
+    7400686: monster1Land //// L_plate
+    7400688: monster1AssScratch //// L_plate
+    7400690: monster1Taunt //// L_plate
+    7400692: monster1Attack1 //// L_plate
+    7400694: monster1Attack2 //// L_plate
+    7400696: monster1Hit1 //// L_plate
+    7400698: monster1Hit2 //// L_plate
+    7400700: monster1Die //// L_plate
+    7400702: monster1Idle //// L_arm
+    7400704: monster1WalkNormal //// L_arm
+    7400706: monster1Run //// L_arm
+    7400708: monster1Jump //// L_arm
+    7400710: monster1Air //// L_arm
+    7400712: monster1Land //// L_arm
+    7400714: monster1AssScratch //// L_arm
+    7400716: monster1Taunt //// L_arm
+    7400718: monster1Attack1 //// L_arm
+    7400720: monster1Attack2 //// L_arm
+    7400722: monster1Hit1 //// L_arm
+    7400724: monster1Hit2 //// L_arm
+    7400726: monster1Die //// L_arm
+    7400728: monster1Idle //// L_elbow
+    7400730: monster1WalkNormal //// L_elbow
+    7400732: monster1Run //// L_elbow
+    7400734: monster1Jump //// L_elbow
+    7400736: monster1Air //// L_elbow
+    7400738: monster1Land //// L_elbow
+    7400740: monster1AssScratch //// L_elbow
+    7400742: monster1Taunt //// L_elbow
+    7400744: monster1Attack1 //// L_elbow
+    7400746: monster1Attack2 //// L_elbow
+    7400748: monster1Hit1 //// L_elbow
+    7400750: monster1Hit2 //// L_elbow
+    7400752: monster1Die //// L_elbow
+    7400754: monster1Idle //// L_wrist
+    7400756: monster1WalkNormal //// L_wrist
+    7400758: monster1Run //// L_wrist
+    7400760: monster1Jump //// L_wrist
+    7400762: monster1Air //// L_wrist
+    7400764: monster1Land //// L_wrist
+    7400766: monster1AssScratch //// L_wrist
+    7400768: monster1Taunt //// L_wrist
+    7400770: monster1Attack1 //// L_wrist
+    7400772: monster1Attack2 //// L_wrist
+    7400774: monster1Hit1 //// L_wrist
+    7400776: monster1Hit2 //// L_wrist
+    7400778: monster1Die //// L_wrist
+    7400780: monster1Idle //// L_thumb1
+    7400782: monster1WalkNormal //// L_thumb1
+    7400784: monster1Run //// L_thumb1
+    7400786: monster1Jump //// L_thumb1
+    7400788: monster1Air //// L_thumb1
+    7400790: monster1Land //// L_thumb1
+    7400792: monster1AssScratch //// L_thumb1
+    7400794: monster1Taunt //// L_thumb1
+    7400796: monster1Attack1 //// L_thumb1
+    7400798: monster1Attack2 //// L_thumb1
+    7400800: monster1Hit1 //// L_thumb1
+    7400802: monster1Hit2 //// L_thumb1
+    7400804: monster1Die //// L_thumb1
+    7400806: monster1Idle //// L_thumb3
+    7400808: monster1WalkNormal //// L_thumb3
+    7400810: monster1Run //// L_thumb3
+    7400812: monster1Jump //// L_thumb3
+    7400814: monster1Air //// L_thumb3
+    7400816: monster1Land //// L_thumb3
+    7400818: monster1AssScratch //// L_thumb3
+    7400820: monster1Taunt //// L_thumb3
+    7400822: monster1Attack1 //// L_thumb3
+    7400824: monster1Attack2 //// L_thumb3
+    7400826: monster1Hit1 //// L_thumb3
+    7400828: monster1Hit2 //// L_thumb3
+    7400830: monster1Die //// L_thumb3
+    7400832: monster1Idle //// L_pink1
+    7400834: monster1WalkNormal //// L_pink1
+    7400836: monster1Run //// L_pink1
+    7400838: monster1Jump //// L_pink1
+    7400840: monster1Air //// L_pink1
+    7400842: monster1Land //// L_pink1
+    7400844: monster1AssScratch //// L_pink1
+    7400846: monster1Taunt //// L_pink1
+    7400848: monster1Attack1 //// L_pink1
+    7400850: monster1Attack2 //// L_pink1
+    7400852: monster1Hit1 //// L_pink1
+    7400854: monster1Hit2 //// L_pink1
+    7400856: monster1Die //// L_pink1
+    7400858: monster1Idle //// L_pink2
+    7400860: monster1WalkNormal //// L_pink2
+    7400862: monster1Run //// L_pink2
+    7400864: monster1Jump //// L_pink2
+    7400866: monster1Air //// L_pink2
+    7400868: monster1Land //// L_pink2
+    7400870: monster1AssScratch //// L_pink2
+    7400872: monster1Taunt //// L_pink2
+    7400874: monster1Attack1 //// L_pink2
+    7400876: monster1Attack2 //// L_pink2
+    7400878: monster1Hit1 //// L_pink2
+    7400880: monster1Hit2 //// L_pink2
+    7400882: monster1Die //// L_pink2
+    7400884: monster1Idle //// L_pink3
+    7400886: monster1WalkNormal //// L_pink3
+    7400888: monster1Run //// L_pink3
+    7400890: monster1Jump //// L_pink3
+    7400892: monster1Air //// L_pink3
+    7400894: monster1Land //// L_pink3
+    7400896: monster1AssScratch //// L_pink3
+    7400898: monster1Taunt //// L_pink3
+    7400900: monster1Attack1 //// L_pink3
+    7400902: monster1Attack2 //// L_pink3
+    7400904: monster1Hit1 //// L_pink3
+    7400906: monster1Hit2 //// L_pink3
+    7400908: monster1Die //// L_pink3
+    7400910: monster1Idle //// L_finger1
+    7400912: monster1WalkNormal //// L_finger1
+    7400914: monster1Run //// L_finger1
+    7400916: monster1Jump //// L_finger1
+    7400918: monster1Air //// L_finger1
+    7400920: monster1Land //// L_finger1
+    7400922: monster1AssScratch //// L_finger1
+    7400924: monster1Taunt //// L_finger1
+    7400926: monster1Attack1 //// L_finger1
+    7400928: monster1Attack2 //// L_finger1
+    7400930: monster1Hit1 //// L_finger1
+    7400932: monster1Hit2 //// L_finger1
+    7400934: monster1Die //// L_finger1
+    7400936: monster1Idle //// L_finger2
+    7400938: monster1WalkNormal //// L_finger2
+    7400940: monster1Run //// L_finger2
+    7400942: monster1Jump //// L_finger2
+    7400944: monster1Air //// L_finger2
+    7400946: monster1Land //// L_finger2
+    7400948: monster1AssScratch //// L_finger2
+    7400950: monster1Taunt //// L_finger2
+    7400952: monster1Attack1 //// L_finger2
+    7400954: monster1Attack2 //// L_finger2
+    7400956: monster1Hit1 //// L_finger2
+    7400958: monster1Hit2 //// L_finger2
+    7400960: monster1Die //// L_finger2
+    7400962: monster1Idle //// L_finger3
+    7400964: monster1WalkNormal //// L_finger3
+    7400966: monster1Run //// L_finger3
+    7400968: monster1Jump //// L_finger3
+    7400970: monster1Air //// L_finger3
+    7400972: monster1Land //// L_finger3
+    7400974: monster1AssScratch //// L_finger3
+    7400976: monster1Taunt //// L_finger3
+    7400978: monster1Attack1 //// L_finger3
+    7400980: monster1Attack2 //// L_finger3
+    7400982: monster1Hit1 //// L_finger3
+    7400984: monster1Hit2 //// L_finger3
+    7400986: monster1Die //// L_finger3
+    7400988: monster1Idle //// R_shoulder
+    7400990: monster1WalkNormal //// R_shoulder
+    7400992: monster1Run //// R_shoulder
+    7400994: monster1Jump //// R_shoulder
+    7400996: monster1Air //// R_shoulder
+    7400998: monster1Land //// R_shoulder
+    7401000: monster1AssScratch //// R_shoulder
+    7401002: monster1Taunt //// R_shoulder
+    7401004: monster1Attack1 //// R_shoulder
+    7401006: monster1Attack2 //// R_shoulder
+    7401008: monster1Hit1 //// R_shoulder
+    7401010: monster1Hit2 //// R_shoulder
+    7401012: monster1Die //// R_shoulder
+    7401014: monster1Idle //// R_plate
+    7401016: monster1WalkNormal //// R_plate
+    7401018: monster1Run //// R_plate
+    7401020: monster1Jump //// R_plate
+    7401022: monster1Air //// R_plate
+    7401024: monster1Land //// R_plate
+    7401026: monster1AssScratch //// R_plate
+    7401028: monster1Taunt //// R_plate
+    7401030: monster1Attack1 //// R_plate
+    7401032: monster1Attack2 //// R_plate
+    7401034: monster1Hit1 //// R_plate
+    7401036: monster1Hit2 //// R_plate
+    7401038: monster1Die //// R_plate
+    7401040: monster1Idle //// R_arm
+    7401042: monster1WalkNormal //// R_arm
+    7401044: monster1Run //// R_arm
+    7401046: monster1Jump //// R_arm
+    7401048: monster1Air //// R_arm
+    7401050: monster1Land //// R_arm
+    7401052: monster1AssScratch //// R_arm
+    7401054: monster1Taunt //// R_arm
+    7401056: monster1Attack1 //// R_arm
+    7401058: monster1Attack2 //// R_arm
+    7401060: monster1Hit1 //// R_arm
+    7401062: monster1Hit2 //// R_arm
+    7401064: monster1Die //// R_arm
+    7401066: monster1Idle //// R_elbow
+    7401068: monster1WalkNormal //// R_elbow
+    7401070: monster1Run //// R_elbow
+    7401072: monster1Jump //// R_elbow
+    7401074: monster1Air //// R_elbow
+    7401076: monster1Land //// R_elbow
+    7401078: monster1AssScratch //// R_elbow
+    7401080: monster1Taunt //// R_elbow
+    7401082: monster1Attack1 //// R_elbow
+    7401084: monster1Attack2 //// R_elbow
+    7401086: monster1Hit1 //// R_elbow
+    7401088: monster1Hit2 //// R_elbow
+    7401090: monster1Die //// R_elbow
+    7401092: monster1Idle //// R_wrist
+    7401094: monster1WalkNormal //// R_wrist
+    7401096: monster1Run //// R_wrist
+    7401098: monster1Jump //// R_wrist
+    7401100: monster1Air //// R_wrist
+    7401102: monster1Land //// R_wrist
+    7401104: monster1AssScratch //// R_wrist
+    7401106: monster1Taunt //// R_wrist
+    7401108: monster1Attack1 //// R_wrist
+    7401110: monster1Attack2 //// R_wrist
+    7401112: monster1Hit1 //// R_wrist
+    7401114: monster1Hit2 //// R_wrist
+    7401116: monster1Die //// R_wrist
+    7401118: monster1Idle //// R_thumb1
+    7401120: monster1WalkNormal //// R_thumb1
+    7401122: monster1Run //// R_thumb1
+    7401124: monster1Jump //// R_thumb1
+    7401126: monster1Air //// R_thumb1
+    7401128: monster1Land //// R_thumb1
+    7401130: monster1AssScratch //// R_thumb1
+    7401132: monster1Taunt //// R_thumb1
+    7401134: monster1Attack1 //// R_thumb1
+    7401136: monster1Attack2 //// R_thumb1
+    7401138: monster1Hit1 //// R_thumb1
+    7401140: monster1Hit2 //// R_thumb1
+    7401142: monster1Die //// R_thumb1
+    7401144: monster1Idle //// R_thumb3
+    7401146: monster1WalkNormal //// R_thumb3
+    7401148: monster1Run //// R_thumb3
+    7401150: monster1Jump //// R_thumb3
+    7401152: monster1Air //// R_thumb3
+    7401154: monster1Land //// R_thumb3
+    7401156: monster1AssScratch //// R_thumb3
+    7401158: monster1Taunt //// R_thumb3
+    7401160: monster1Attack1 //// R_thumb3
+    7401162: monster1Attack2 //// R_thumb3
+    7401164: monster1Hit1 //// R_thumb3
+    7401166: monster1Hit2 //// R_thumb3
+    7401168: monster1Die //// R_thumb3
+    7401170: monster1Idle //// R_pink1
+    7401172: monster1WalkNormal //// R_pink1
+    7401174: monster1Run //// R_pink1
+    7401176: monster1Jump //// R_pink1
+    7401178: monster1Air //// R_pink1
+    7401180: monster1Land //// R_pink1
+    7401182: monster1AssScratch //// R_pink1
+    7401184: monster1Taunt //// R_pink1
+    7401186: monster1Attack1 //// R_pink1
+    7401188: monster1Attack2 //// R_pink1
+    7401190: monster1Hit1 //// R_pink1
+    7401192: monster1Hit2 //// R_pink1
+    7401194: monster1Die //// R_pink1
+    7401196: monster1Idle //// R_pink2
+    7401198: monster1WalkNormal //// R_pink2
+    7401200: monster1Run //// R_pink2
+    7401202: monster1Jump //// R_pink2
+    7401204: monster1Air //// R_pink2
+    7401206: monster1Land //// R_pink2
+    7401208: monster1AssScratch //// R_pink2
+    7401210: monster1Taunt //// R_pink2
+    7401212: monster1Attack1 //// R_pink2
+    7401214: monster1Attack2 //// R_pink2
+    7401216: monster1Hit1 //// R_pink2
+    7401218: monster1Hit2 //// R_pink2
+    7401220: monster1Die //// R_pink2
+    7401222: monster1Idle //// R_pink3
+    7401224: monster1WalkNormal //// R_pink3
+    7401226: monster1Run //// R_pink3
+    7401228: monster1Jump //// R_pink3
+    7401230: monster1Air //// R_pink3
+    7401232: monster1Land //// R_pink3
+    7401234: monster1AssScratch //// R_pink3
+    7401236: monster1Taunt //// R_pink3
+    7401238: monster1Attack1 //// R_pink3
+    7401240: monster1Attack2 //// R_pink3
+    7401242: monster1Hit1 //// R_pink3
+    7401244: monster1Hit2 //// R_pink3
+    7401246: monster1Die //// R_pink3
+    7401248: monster1Idle //// R_finger1
+    7401250: monster1WalkNormal //// R_finger1
+    7401252: monster1Run //// R_finger1
+    7401254: monster1Jump //// R_finger1
+    7401256: monster1Air //// R_finger1
+    7401258: monster1Land //// R_finger1
+    7401260: monster1AssScratch //// R_finger1
+    7401262: monster1Taunt //// R_finger1
+    7401264: monster1Attack1 //// R_finger1
+    7401266: monster1Attack2 //// R_finger1
+    7401268: monster1Hit1 //// R_finger1
+    7401270: monster1Hit2 //// R_finger1
+    7401272: monster1Die //// R_finger1
+    7401274: monster1Idle //// R_finger2
+    7401276: monster1WalkNormal //// R_finger2
+    7401278: monster1Run //// R_finger2
+    7401280: monster1Jump //// R_finger2
+    7401282: monster1Air //// R_finger2
+    7401284: monster1Land //// R_finger2
+    7401286: monster1AssScratch //// R_finger2
+    7401288: monster1Taunt //// R_finger2
+    7401290: monster1Attack1 //// R_finger2
+    7401292: monster1Attack2 //// R_finger2
+    7401294: monster1Hit1 //// R_finger2
+    7401296: monster1Hit2 //// R_finger2
+    7401298: monster1Die //// R_finger2
+    7401300: monster1Idle //// head
+    7401302: monster1WalkNormal //// head
+    7401304: monster1Run //// head
+    7401306: monster1Jump //// head
+    7401308: monster1Air //// head
+    7401310: monster1Land //// head
+    7401312: monster1AssScratch //// head
+    7401314: monster1Taunt //// head
+    7401316: monster1Attack1 //// head
+    7401318: monster1Attack2 //// head
+    7401320: monster1Hit1 //// head
+    7401322: monster1Hit2 //// head
+    7401324: monster1Die //// head
+    7401326: monster1Idle //// L_eye
+    7401328: monster1WalkNormal //// L_eye
+    7401330: monster1Run //// L_eye
+    7401332: monster1Jump //// L_eye
+    7401334: monster1Air //// L_eye
+    7401336: monster1Land //// L_eye
+    7401338: monster1AssScratch //// L_eye
+    7401340: monster1Taunt //// L_eye
+    7401342: monster1Attack1 //// L_eye
+    7401344: monster1Attack2 //// L_eye
+    7401346: monster1Hit1 //// L_eye
+    7401348: monster1Hit2 //// L_eye
+    7401350: monster1Die //// L_eye
+    7401352: monster1Idle //// R_eye
+    7401354: monster1WalkNormal //// R_eye
+    7401356: monster1Run //// R_eye
+    7401358: monster1Jump //// R_eye
+    7401360: monster1Air //// R_eye
+    7401362: monster1Land //// R_eye
+    7401364: monster1AssScratch //// R_eye
+    7401366: monster1Taunt //// R_eye
+    7401368: monster1Attack1 //// R_eye
+    7401370: monster1Attack2 //// R_eye
+    7401372: monster1Hit1 //// R_eye
+    7401374: monster1Hit2 //// R_eye
+    7401376: monster1Die //// R_eye
+    7401378: monster1Idle //// jaw
+    7401380: monster1WalkNormal //// jaw
+    7401382: monster1Run //// jaw
+    7401384: monster1Jump //// jaw
+    7401386: monster1Air //// jaw
+    7401388: monster1Land //// jaw
+    7401390: monster1AssScratch //// jaw
+    7401392: monster1Taunt //// jaw
+    7401394: monster1Attack1 //// jaw
+    7401396: monster1Attack2 //// jaw
+    7401398: monster1Hit1 //// jaw
+    7401400: monster1Hit2 //// jaw
+    7401402: monster1Die //// jaw
+    11100000: //RootNode
+    11100002: armor
+    11100004: body
+    11100006: chest
+    11100008: chestcontrol
+    11100010: head
+    11100012: headcontrol
+    11100014: hipcontrol
+    11100016: hips
+    11100018: jaw
+    11100020: Joint_3
+    11100022: Joint_3_2
+    11100024: Joint_3_3
+    11100026: Joint_3_4
+    11100028: Joint_3_5
+    11100030: Joint_3_6
+    11100032: L_ankle
+    11100034: L_ankle_Goal
+    11100036: L_arm
+    11100038: L_arm_Pole
+    11100040: L_armcontrol
+    11100042: L_elbow
+    11100044: L_eye
+    11100046: L_finger1
+    11100048: L_finger2
+    11100050: L_finger3
+    11100052: L_FOOT
+    11100054: L_foot
+    11100056: L_knee
+    11100058: L_leg
+    11100060: L_leg_Pole
+    11100062: L_pink1
+    11100064: L_pink2
+    11100066: L_pink3
+    11100068: L_plate
+    11100070: L_plate_Goal
+    11100072: L_shoulder
+    11100074: L_thumb1
+    11100076: L_thumb2
+    11100078: L_thumb3
+    11100080: L_toes
+    11100082: L_wrist
+    11100084: L_wrist_Goal
+    11100086: lip
+    11100088: lookat
+    11100090: mace
+    11100092: meshes
+    11100094: R_ankle
+    11100096: R_ankle_Goal
+    11100098: R_arm
+    11100100: R_arm_Pole
+    11100102: R_armcontrol
+    11100104: R_elbow
+    11100106: R_eye
+    11100108: R_finger1
+    11100110: R_finger2
+    11100112: R_finger3
+    11100114: R_FOOT
+    11100116: R_foot
+    11100118: R_knee
+    11100120: R_leg
+    11100122: R_leg_Pole
+    11100124: R_pink1
+    11100126: R_pink2
+    11100128: R_pink3
+    11100130: R_plate
+    11100132: R_plate_Goal
+    11100134: R_shoulder
+    11100136: R_thumb1
+    11100138: R_thumb2
+    11100140: R_thumb3
+    11100142: R_toes
+    11100144: R_wrist
+    11100146: R_wrist_Goal
+    11100148: shield
+    11100150: spine
+    11100152: spinecontrol
+    11100154: top
     13700000: armor
     13700002: body
   materials:
@@ -197,7 +964,7 @@ ModelImporter:
     animationImportWarnings: 
     animationRetargetingWarnings: 
     animationDoRetargetingWarnings: 0
-    animationCompression: 0
+    animationCompression: 1
     animationRotationError: 0.8
     animationPositionError: 0.95
     animationScaleError: 0.5
@@ -209,7 +976,7 @@ ModelImporter:
       takeName: C4D Animation Take
       firstFrame: 0
       lastFrame: 87
-      wrapMode: 0
+      wrapMode: 2
       orientationOffsetY: 0
       level: 0
       cycleOffset: 0
@@ -2665,7 +3432,7 @@ ModelImporter:
     rootMotionBoneName: 
     hasTranslationDoF: 0
   lastHumanDescriptionAvatarSource: {instanceID: 0}
-  animationType: 2
+  animationType: 1
   humanoidOversampling: 1
   additionalBone: 0
   userData: 
