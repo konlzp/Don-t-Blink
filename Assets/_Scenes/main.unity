@@ -14271,10 +14271,9 @@ MonoBehaviour:
   m_GameObject: {fileID: 2090464763}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 55cb055c6d21d844ca557bbcad36928b, type: 3}
+  m_Script: {fileID: 11500000, guid: 779d05f8b8e4845a4be0716ab1d65bf5, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  monsters: {fileID: 0}
   speedH: 2
   speedV: 2
 --- !u!1001 &2095103487
