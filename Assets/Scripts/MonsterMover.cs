@@ -49,8 +49,11 @@ public class MonsterMover : MonoBehaviour
         animator = GetComponent<Animator> ();
         animation = GetComponent<Animation> ();
 
-        // Stop animation
-        SetAnimationOff ();
+        // Stop animation -why??
+         SetAnimationOff ();
+
+		// Start all animations because it's dark
+		// SetAnimationOn();
 
         // Set initial speed
         speed = defaultSpeed;
