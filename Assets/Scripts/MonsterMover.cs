@@ -33,8 +33,7 @@ public class MonsterMover : MonoBehaviour
 
     // Animation
     private Animator animator = null;
-    // Underscore prevents naming warning
-    private Animation animation_ = null;
+    private new Animation animation = null;
     private bool animationOn = true;
 
     // Mainlight
@@ -48,7 +47,7 @@ public class MonsterMover : MonoBehaviour
         // Get components
         lightControl = spotlight.GetComponent<LightControl> ();
         animator = GetComponent<Animator> ();
-        animation_ = GetComponent<Animation> ();
+        animation = GetComponent<Animation> ();
 
         // Stop animation
         SetAnimationOff ();
@@ -195,8 +194,8 @@ public class MonsterMover : MonoBehaviour
             Debug.Log ("Starting animation for " + gameObject.name);
             if (animator != null) {
                 animator.StartPlayback ();
-            } else if (animation_ != null) {
-                animation_.Play ();
+            } else if (animation != null) {
+                animation.Play ();
             }
             animationOn = true;
         }
@@ -208,8 +207,8 @@ public class MonsterMover : MonoBehaviour
             Debug.Log ("Stopping animation for " + gameObject.name);
             if (animator != null) {
                 animator.Stop ();
-            } else if (animation_ != null) {
-                animation_.Stop ();
+            } else if (animation != null) {
+                animation.Stop ();
             }
             animationOn = false;
         }
