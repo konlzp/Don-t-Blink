@@ -23,10 +23,14 @@ public class Timer : MonoBehaviour {
 	
 	// Update is called once per frame
 	void Update () {
-		if (countTime > 0) {
-			countTime -= Time.deltaTime;
-		}
-		setTime();
+        if (gameController.IsGameActive)
+        {
+            if (countTime > 0)
+            {
+                countTime -= Time.deltaTime;
+            }
+            setTime();
+        }
 	}
 
 
