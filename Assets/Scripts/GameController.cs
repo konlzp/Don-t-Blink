@@ -34,6 +34,11 @@ public class GameController : MonoBehaviour
             Application.Quit ();
         }
 
+        if (Input.GetKeyDown(KeyCode.S))
+        {
+            GameStart();
+        }
+
         if (mainLight.intensity != 0) {
             if (audioSource.clip != lullabyMusic) {
                 audioSource.clip = lullabyMusic;
@@ -55,6 +60,7 @@ public class GameController : MonoBehaviour
     {
         gameOn = true;
         Cursor.visible = false;
+        startMenu.SetActive(false);
         gameUI.SetActive (true);
     }
 
