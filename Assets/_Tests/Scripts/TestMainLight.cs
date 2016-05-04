@@ -2,7 +2,7 @@
 using System.Collections;
 using UnityTest;
 
-public class TestLightOn : MonoBehaviour
+public class TestMainLight : MonoBehaviour
 {
     public Light mainLight;
     public MonsterMover monsterMover;

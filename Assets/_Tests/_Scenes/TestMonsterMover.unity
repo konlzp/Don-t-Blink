@@ -582,7 +582,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!114 &520836333
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1272,28 +1272,13 @@ GameObject:
   m_Component:
   - 4: {fileID: 1537482258}
   - 114: {fileID: 1537482257}
-  - 114: {fileID: 1537482256}
   m_Layer: 0
-  m_Name: TestLightOn
+  m_Name: TestMainLight
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 0
---- !u!114 &1537482256
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_PrefabParentObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 0}
-  m_GameObject: {fileID: 1537482255}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: f85c3ec45f4b347dd9e5c23bf0f9d4b9, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  mainLight: {fileID: 1492433208}
-  monsterMover: {fileID: 2062251523}
-  gameController: {fileID: 2132658700}
+  m_IsActive: 1
 --- !u!114 &1537482257
 MonoBehaviour:
   m_ObjectHideFlags: 0
