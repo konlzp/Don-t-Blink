@@ -17917,7 +17917,8 @@ MonoBehaviour:
   uiText: {fileID: 117765403}
   timer: {fileID: 1643636791}
   mainLight: {fileID: 1492433208}
-  backGroundMusic: {fileID: 8300000, guid: 5cd4e10be73e7db4c93b03086de51a44, type: 3}
+  HomePageMusic: {fileID: 8300000, guid: 5cd4e10be73e7db4c93b03086de51a44, type: 3}
+  backGroundMusic: {fileID: 8300000, guid: b9db72614fa39af40a1a67ed4cb67bb3, type: 3}
   lullabyMusic: {fileID: 8300000, guid: 05bf7500331e47b43aebc00d1e7fb968, type: 3}
   startMenu: {fileID: 2047274420}
   gameUI: {fileID: 183507736}

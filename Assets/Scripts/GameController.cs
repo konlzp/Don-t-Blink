@@ -9,6 +9,7 @@ public class GameController : MonoBehaviour
     public Text uiText;
     public Timer timer;
     public Light mainLight;
+    public AudioClip HomePageMusic;
     public AudioClip backGroundMusic;
     public AudioClip lullabyMusic;
     public GameObject startMenu;
@@ -40,8 +41,11 @@ public class GameController : MonoBehaviour
                 audioSource.Play ();
             }
         } else {
-            if (audioSource.clip != backGroundMusic) {
+            if (audioSource.clip != backGroundMusic && gameOn == true) {
                 audioSource.clip = backGroundMusic;
+                audioSource.Play ();
+            }else if(audioSource.clip != HomePageMusic && gameOn == false) {
+                audioSource.clip = HomePageMusic;
                 audioSource.Play ();
             }
         }
