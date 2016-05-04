@@ -8,7 +8,6 @@ public class StartMenu : MonoBehaviour
 
     public void Play ()
     {
-        gameObject.SetActive (false);
         gameController.GameStart ();
     }
 

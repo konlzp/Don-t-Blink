@@ -84,7 +84,7 @@ public class LightControl : MonoBehaviour {
     void FlashlightControl()
     {
         //Turning on or off light
-        if (Input.GetKeyDown(KeyCode.Z) && Time.time > nextLightOn)
+        if (Input.GetMouseButton(0) && Time.time > nextLightOn)
         {
             if (slider.value != 0)
             {
@@ -148,7 +148,7 @@ public class LightControl : MonoBehaviour {
             RechargeFlashlight();
         }
 
-        if (Input.GetKeyDown(KeyCode.M) && !momCalled)
+        if (Input.GetMouseButton(1) && !momCalled)
         {
             audioSource.clip = momClip;
             audioSource.Play();
