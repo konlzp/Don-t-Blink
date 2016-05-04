@@ -2,31 +2,33 @@
 using System.Collections;
 using UnityTest;
 
-public class TestMainLight : MonoBehaviour
+public class TestLightsOff : MonoBehaviour
 {
     public Light mainLight;
+    public GameObject spotlight;
     public MonsterMover monsterMover;
     public GameController gameController;
 
+    private LightControl lightControl;
     private GameObject monster;
     private int frame = 0;
 
-    // Use this for initialization
     void Start ()
     {
         monster = monsterMover.gameObject;
+        lightControl = spotlight.GetComponent<LightControl> ();
     }
 	
-    // Update is called once per frame
     void Update ()
     {
         if (frame == 1) {
             gameController.GameStart ();
-            mainLight.intensity = 0.2f;
+            mainLight.intensity = 0.0f;
+            lightControl.ImmediatelyTurnOffLight ();
 //            monster.transform.hasChanged = false;
         } else if (frame == 60) {
-            IntegrationTest.Assert (monsterMover.State == MonsterMover.MonsterState.Stunned);
-//            IntegrationTest.Assert (monster.transform.hasChanged == false);
+            IntegrationTest.Assert (monsterMover.State == MonsterMover.MonsterState.Moving);
+//            IntegrationTest.Assert (monster.transform.hasChanged == true);
             IntegrationTest.Pass ();
         }
         frame++;
