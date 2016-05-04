@@ -566,6 +566,71 @@ CanvasRenderer:
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 484748303}
+--- !u!1 &520836332
+GameObject:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  serializedVersion: 4
+  m_Component:
+  - 4: {fileID: 520836334}
+  - 114: {fileID: 520836333}
+  - 114: {fileID: 520836335}
+  m_Layer: 0
+  m_Name: TestFlashlight
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!114 &520836333
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 520836332}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: b1dba0b27b0864740a8720e920aa88c0, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  timeout: 10
+  ignored: 0
+  succeedAfterAllAssertionsAreExecuted: 0
+  expectException: 0
+  expectedExceptionList: 
+  succeedWhenExceptionIsThrown: 0
+  includedPlatforms: -1
+  platformsToIgnore: []
+  dynamic: 0
+  dynamicTypeName: 
+--- !u!4 &520836334
+Transform:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 520836332}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 0}
+  m_RootOrder: 9
+--- !u!114 &520836335
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 520836332}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 213ba832536f24959a416fe199892e98, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  spotlight: {fileID: 1988925789}
+  mainCamera: {fileID: 2090464763}
+  monsterMover: {fileID: 2062251523}
+  gameController: {fileID: 2132658700}
 --- !u!1 &586241921
 GameObject:
   m_ObjectHideFlags: 0
@@ -994,7 +1059,7 @@ Prefab:
     m_Modifications:
     - target: {fileID: 449218, guid: e3c25ae104ea743b6a954c38fc7f6892, type: 2}
       propertyPath: m_LocalPosition.x
-      value: -20
+      value: -5
       objectReference: {fileID: 0}
     - target: {fileID: 449218, guid: e3c25ae104ea743b6a954c38fc7f6892, type: 2}
       propertyPath: m_LocalPosition.y
@@ -1088,7 +1153,7 @@ Prefab:
     m_Modifications:
     - target: {fileID: 400000, guid: db8902e3962e848eb84636d7d9bb94fc, type: 3}
       propertyPath: m_LocalPosition.x
-      value: 0.000000045797
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 400000, guid: db8902e3962e848eb84636d7d9bb94fc, type: 3}
       propertyPath: m_LocalPosition.y
@@ -1387,7 +1452,7 @@ Prefab:
     m_Modifications:
     - target: {fileID: 449218, guid: e3c25ae104ea743b6a954c38fc7f6892, type: 2}
       propertyPath: m_LocalPosition.x
-      value: 20
+      value: 5
       objectReference: {fileID: 0}
     - target: {fileID: 449218, guid: e3c25ae104ea743b6a954c38fc7f6892, type: 2}
       propertyPath: m_LocalPosition.y
@@ -1510,7 +1575,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   slider: {fileID: 363600350}
-  flashCount: 6
+  flashCount: 0
   lightOnClip: {fileID: 8300000, guid: 3af9f32417f9f33419d37d201588a034, type: 3}
   lightOffClip: {fileID: 8300000, guid: 008766bdc446fa940a8f0ac99388822e, type: 3}
   momClip: {fileID: 8300000, guid: 935261e244f89bb458bc41eb44fab8f1, type: 3}
@@ -1718,7 +1783,7 @@ RectTransform:
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 2047274420}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0, y: 0, z: -15.15}
+  m_LocalPosition: {x: 0, y: 0, z: -24.499}
   m_LocalScale: {x: 0.0007, y: 0.0007, z: 1}
   m_Children:
   - {fileID: 1210431036}
@@ -1728,7 +1793,7 @@ RectTransform:
   m_RootOrder: 6
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: 0.24, y: 4.47}
+  m_AnchoredPosition: {x: -0.01, y: -0.064}
   m_SizeDelta: {x: 100, y: 100}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &2047274425
@@ -1754,8 +1819,8 @@ GameObject:
   - 33: {fileID: 2062251526}
   - 65: {fileID: 2062251525}
   - 23: {fileID: 2062251524}
-  - 114: {fileID: 2062251523}
   - 54: {fileID: 2062251522}
+  - 114: {fileID: 2062251523}
   m_Layer: 0
   m_Name: TestMonster1
   m_TagString: Untagged
@@ -1801,7 +1866,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: b161835d2b4b543cca6db54c2429cd66, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  path: {fileID: 2062251520}
+  path: {fileID: 165141795}
   defaultSpeed: 0.1
   spotlight: {fileID: 1988925789}
   mainLight: {fileID: 1492433208}
@@ -2036,7 +2101,7 @@ Transform:
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 2090464763}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0.24, y: 4.47, z: -15.65}
+  m_LocalPosition: {x: 0, y: 0, z: -25}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
   - {fileID: 277640987}

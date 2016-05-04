@@ -159,4 +159,18 @@ public class LightControl : MonoBehaviour {
             }
         }
     }
+
+    public void ImmediatelyTurnOnLight() 
+    {
+        lightOn = true;
+        flashLight.intensity = 2.0F;
+        Debug.Log ("Turned light ON");
+    }
+
+    public void ImmediatelyTurnOffLight() 
+    {
+        lightOn = false;
+        flashLight.intensity = 0.0F;
+        Debug.Log ("Turned light OFF");
+    }
 }
