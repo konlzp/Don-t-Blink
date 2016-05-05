@@ -10487,6 +10487,10 @@ Prefab:
       propertyPath: m_LocalScale.z
       value: 1.6687655
       objectReference: {fileID: 0}
+    - target: {fileID: 11400000, guid: 595cf544943e29a4d9a7b813e4218a3c, type: 2}
+      propertyPath: gameController
+      value: 
+      objectReference: {fileID: 2132658700}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 595cf544943e29a4d9a7b813e4218a3c, type: 2}
   m_IsPrefabParent: 0

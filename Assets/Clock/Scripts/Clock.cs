@@ -34,7 +34,7 @@ public class Clock : MonoBehaviour {
     //-----------------------------------------------------------------------------------------------------------------------------------------
     void Update() 
     {
-            if (!gameController.IsGameActive)
+            if (gameController.IsGameActive)
             {
                 //-- calculate time
                 msecs += Time.deltaTime * clockSpeed;

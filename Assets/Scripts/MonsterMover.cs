@@ -127,19 +127,27 @@ public class MonsterMover : MonoBehaviour
 
     private void HandlePausedState ()
     {
-        pauseTime -= Time.deltaTime;
+        if (IsAffectedByFlashlight() || IsMainlightOn())
+        {
+            SetAnimationOff();
+            state = MonsterState.Stunned;
+        }
+        else {
+            pauseTime -= Time.deltaTime;
+            SetAnimationOn();
 
-        // Set state to Moving if pause timer runs out
-        if (pauseTime <= 0.0F) {
-            SetAnimationOn ();
-            state = MonsterState.Moving; 
+            // Set state to Moving if pause timer runs out
+            if (pauseTime <= 0.0F)
+            {
+                state = MonsterState.Moving;
+            }
         }
     }
 
     void OnTriggerEnter (Collider other)
     {
         if (other.gameObject.name == "flashlight") {
-            Debug.Log (other.gameObject.name + " entered " + gameObject.name + "'s trigger");
+            //Debug.Log (other.gameObject.name + " entered " + gameObject.name + "'s trigger");
             collided = true;
         }
     }
@@ -147,7 +155,7 @@ public class MonsterMover : MonoBehaviour
     void OnTriggerExit (Collider other)
     {
         if (other.gameObject.name == "flashlight") {
-            Debug.Log (other.gameObject.name + " exited " + gameObject.name + "'s trigger");
+            //Debug.Log (other.gameObject.name + " exited " + gameObject.name + "'s trigger");
             collided = false;
         }
     }
